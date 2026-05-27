@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savings Goal Calculator — How Much to Save Per Month | FreeMoneyIQ</title>
+  <meta name="description" content="Find out exactly how much you need to save each month to reach your financial goal. Free savings calculator with timeline and interest." />
+  <meta name="keywords" content="savings goal calculator, how much to save per month, monthly savings calculator, savings target calculator, emergency fund calculator" />
+  <link rel="canonical" href="https://freemoneyiq.com/savings-goal-calculator.html" />
+  <meta property="og:title" content="Free Savings Goal Calculator | FreeMoneyIQ" />
+  <meta property="og:description" content="Find out exactly how much you need to save each month to reach your financial goal. Free savings calculator with timeline and interest." />
+  <meta property="og:url" content="https://freemoneyiq.com/savings-goal-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta name="google-site-verification" content="yabzf5B-tALqjmJeuyczFJ1A_9VaFGuPrvecgYedLaU" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDKB4113HX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LDKB4113HX');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much should I save per month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A common guideline is to save at least 20% of your take-home pay (the 50/30/20 rule). But the right number depends on your specific goal. Use this calculator to work backwards: enter your target amount and timeline to see the exact monthly savings needed. For emergency funds, aim for 3–6 months of living expenses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an emergency fund and how much should I have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An emergency fund is a dedicated cash reserve for unexpected expenses like job loss, medical bills, or car repairs. Most financial experts recommend 3–6 months of essential living expenses. If your monthly expenses are $3,500, your target emergency fund is $10,500–$21,000. Keep it in a high-yield savings account earning 4–5% APY for best results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I reach my savings goal faster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Automate your savings so the money transfers on payday before you can spend it. Open a high-yield savings account (HYSA) to earn 4–5% instead of the national average 0.6%. Cut recurring subscriptions, redirect a portion of raises or bonuses to savings, and use the 'pay yourself first' principle. Even $50/month extra makes a meaningful difference over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where should I keep my savings?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For goals under 5 years, a high-yield savings account (HYSA) or money market account is ideal — FDIC-insured, liquid, and earning 4–5% APY in 2026. For longer-term goals, consider I-bonds for inflation protection or a brokerage account for goals 5+ years away. Avoid keeping large savings in a regular checking account where it earns almost nothing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What interest rate should I use for my savings calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In 2026, the best high-yield savings accounts offer 4.5–5.0% APY. Traditional bank savings accounts average just 0.6% APY. Use 4.5% in this calculator if you plan to use an HYSA, which is the realistic rate for savvy savers. If your money sits in a checking account, use 0–0.5%."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the Savings Goal Calculator",
+    "description": "Calculate your required monthly savings to reach any financial goal in under 60 seconds.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Enter your savings goal amount",
+        "text": "Type in the total amount you want to save — for example, $10,000 for an emergency fund, $5,000 for a vacation, or $30,000 for a house down payment."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Enter your current savings",
+        "text": "Input how much you've already saved toward this goal. The calculator will subtract this from your target to show how much more you need to save."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Set your timeline and interest rate",
+        "text": "Enter how many months you have to reach your goal. Then enter your expected annual interest rate — use 4.5% for a high-yield savings account or 0% if no interest applies."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Click Calculate and set up automatic savings",
+        "text": "Hit 'Calculate Monthly Savings' to see your required monthly contribution. Then set up an automatic transfer for that amount on payday to make saving effortless."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a6cf6; --primary-dark: #1452c8; --accent: #00c9a7;
+      --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
+      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,108,246,0.08);
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+    .hero { background: linear-gradient(135deg, #1a6cf6 0%, #00c9a7 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+    .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; text-align: center; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin: 32px auto; border: 1px solid var(--border); max-width: 700px; }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0f7ff, #e8fff8); border: 1px solid #c3dffe; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .content-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 12px; margin-top: 32px; }
+    .content-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .faq-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 12px; background: var(--card); }
+    .faq-item h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+    .related-calcs { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .related-calcs h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s; display: block; }
+    .related-card:hover { box-shadow: var(--shadow); }
+    .related-card .icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .related-card .name { font-size: 0.85rem; font-weight: 600; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 32px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Free<span>MoneyIQ</span></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/mortgage-calculator.html">Mortgage</a>
+    <a href="/loan-payoff-calculator.html">Loan</a>
+    <a href="/savings-goal-calculator.html" class="active">Savings</a>
+    <a href="/freelancer-rate-calculator.html">Freelance Rate</a>
+    <a href="/compound-interest-calculator.html">Compound</a>
+    <a href="/tax-withholding-calculator.html">Tax</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>🐖 Free Savings Goal Calculator</h1>
+  <p>Find out exactly how much to save each month to hit your financial goal on time — with interest factored in.</p>
+</div>
+
+<div class="container">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="calc-panel">
+    <h2>🐖 Savings Goal Calculator</h2>
+    <p class="subtitle">Enter your goal, timeline, and interest rate to find your required monthly savings amount.</p>
+
+    <div class="form-group">
+      <label>Savings Goal ($)</label>
+      <input type="number" id="s-goal" placeholder="e.g. 20000" value="20000" />
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Current Savings ($)</label>
+        <input type="number" id="s-current" placeholder="e.g. 2000" value="2000" />
+      </div>
+      <div class="form-group">
+        <label>Months to Reach Goal</label>
+        <input type="number" id="s-months" placeholder="e.g. 24" value="24" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Annual Interest Rate (%) — use 4.5 for a high-yield savings account</label>
+      <input type="number" id="s-rate" placeholder="e.g. 4.5" value="4.5" step="0.1" />
+    </div>
+
+    <button class="calc-btn" onclick="calcSavings()">Calculate Monthly Savings</button>
+
+    <div id="savings-result" class="result-box">
+      <div class="result-main" id="s-monthly"></div>
+      <div class="result-label">Required Monthly Savings</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Total Contributions</div><div class="value" id="s-total"></div></div>
+        <div class="result-item"><div class="label">Interest Earned</div><div class="value" id="s-interest"></div></div>
+        <div class="result-item"><div class="label">Goal Amount</div><div class="value" id="s-goalout"></div></div>
+        <div class="result-item"><div class="label">Target Date</div><div class="value" id="s-date"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- Content -->
+<div class="content-section">
+  <h2>How to Set a Savings Goal That You'll Actually Hit</h2>
+  <p>The single biggest predictor of savings success isn't income — it's having a specific, defined target. "Save more money" fails. "$15,000 for a house down payment by December 2027" succeeds. This calculator helps you translate any vague savings intention into a concrete monthly number. Once you know your target, automate a transfer on payday so the saving happens before you can spend the money.</p>
+  <p>The 50/30/20 rule is a useful starting framework: 50% of take-home pay for needs, 30% for wants, and 20% for savings and debt repayment. If you earn $5,000/month after taxes, that's $1,000 going toward savings goals. But "savings" should be prioritized — emergency fund first, then high-interest debt payoff, then long-term goals like retirement and a house.</p>
+
+  <h2>High-Yield Savings Accounts: The Easy Win Most People Miss</h2>
+  <p>In 2026, the best high-yield savings accounts (HYSAs) offer 4.5–5.0% APY — that's 7–8x the national average bank savings rate of 0.6%. On $10,000 saved over 12 months, the difference is $450 in interest vs. $60. This is free money for doing nothing differently except switching where you park your savings. Look for HYSAs at online banks like Ally, Marcus by Goldman Sachs, SoFi, or Discover. All are FDIC-insured up to $250,000.</p>
+  <p>For short-to-medium-term goals (under 5 years), HYSAs are ideal because your money stays accessible without penalty. For money you won't need for 5+ years, consider Series I bonds (inflation-protected) or a brokerage account investing in low-cost index funds, where historical returns average 7–10% annually. This calculator lets you model any rate scenario so you can see how much faster you'll reach your goal with a higher-yield account.</p>
+
+  <h2>Building Your Emergency Fund: The Foundation of Financial Security</h2>
+  <p>Before saving for any other goal, prioritize your emergency fund. Most financial advisors recommend 3–6 months of essential expenses — rent/mortgage, utilities, groceries, minimum debt payments. For someone spending $3,500/month on necessities, that's a $10,500–$21,000 target. If this feels overwhelming, start with a "starter emergency fund" of $1,000 to cover minor unexpected expenses, then build from there.</p>
+  <p>Keep your emergency fund in a dedicated account separate from your regular checking — this prevents the money from being accidentally spent. A high-yield savings account is perfect for this purpose: accessible within 1–2 business days if needed, but not so easy to access that you're tempted to dip into it. Use this calculator to find how much to save each month to hit your emergency fund target and know exactly when you'll get there.</p>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>How much should I save per month?</h3>
+    <p>A common guideline is to save at least 20% of your take-home pay (the 50/30/20 rule). But the right number depends on your specific goal. Use this calculator to work backwards: enter your target and timeline to see the exact monthly savings needed. For emergency funds, aim for 3–6 months of living expenses.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What is an emergency fund and how much should I have?</h3>
+    <p>An emergency fund is a dedicated cash reserve for unexpected expenses like job loss, medical bills, or car repairs. Most experts recommend 3–6 months of essential living expenses. If your monthly costs are $3,500, your target is $10,500–$21,000. Keep it in a high-yield savings account earning 4–5% APY.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How can I reach my savings goal faster?</h3>
+    <p>Automate savings transfers on payday, open a high-yield savings account (4–5% APY vs. 0.6% average), cut subscriptions you don't use, redirect bonuses and tax refunds to savings, and apply the "pay yourself first" principle. Even $50/month extra makes a meaningful difference compounded over time.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Where should I keep my savings?</h3>
+    <p>For goals under 5 years, a high-yield savings account (HYSA) or money market account is ideal — FDIC-insured, liquid, and earning 4–5% APY in 2026. For 5+ year goals, consider index fund investing. Avoid keeping large savings in a regular checking account where it earns almost nothing.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What interest rate should I use in this savings calculator?</h3>
+    <p>In 2026, the best HYSAs offer 4.5–5.0% APY. Traditional bank savings accounts average just 0.6% APY. Use 4.5% if you plan to use an HYSA. If your money sits in a checking account, use 0–0.5%. The difference in interest earned over 2 years can be hundreds of dollars.</p>
+  </div>
+</div>
+
+<div class="related-calcs">
+  <h2>Other Free Calculators</h2>
+  <div class="related-grid">
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon">🏠</div><div class="name">Mortgage Calculator</div></a>
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon">💳</div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon">💼</div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon">📈</div><div class="name">Compound Interest Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon">🧾</div><div class="name">Tax Withholding Calculator</div></a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 FreeMoneyIQ — Free Finance Calculators</p>
+  <p style="margin-top:8px"><a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/about.html">About</a></p>
+</footer>
+
+<script>
+  function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+  function fmt2(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  function calcSavings() {
+    const goal    = +document.getElementById('s-goal').value;
+    const current = +document.getElementById('s-current').value;
+    const months  = +document.getElementById('s-months').value;
+    const rate    = +document.getElementById('s-rate').value / 100 / 12;
+    const needed  = goal - current * Math.pow(1 + rate, months); // account for interest on existing savings
+
+    let monthly;
+    if (rate === 0) {
+      monthly = (goal - current) / months;
+    } else {
+      // FV of existing savings
+      const fvCurrent = current * Math.pow(1 + rate, months);
+      const remaining = goal - fvCurrent;
+      if (remaining <= 0) {
+        // Already on track with existing savings alone
+        document.getElementById('s-monthly').textContent = '$0/mo';
+        document.getElementById('s-total').textContent = fmt(current);
+        document.getElementById('s-interest').textContent = fmt(fvCurrent - current);
+        document.getElementById('s-goalout').textContent = fmt(goal);
+        const targetDate = new Date();
+        targetDate.setMonth(targetDate.getMonth() + months);
+        document.getElementById('s-date').textContent = targetDate.toLocaleDateString('en-US', {month:'short', year:'numeric'});
+        document.getElementById('savings-result').classList.add('show');
+        return;
+      }
+      monthly = remaining * rate / (Math.pow(1 + rate, months) - 1);
+    }
+
+    const totalContrib = monthly * months + current;
+    const interestEarned = goal - totalContrib;
+    const targetDate = new Date();
+    targetDate.setMonth(targetDate.getMonth() + months);
+
+    document.getElementById('s-monthly').textContent = fmt2(monthly) + '/mo';
+    document.getElementById('s-total').textContent = fmt(totalContrib);
+    document.getElementById('s-interest').textContent = fmt(Math.max(0, interestEarned));
+    document.getElementById('s-goalout').textContent = fmt(goal);
+    document.getElementById('s-date').textContent = targetDate.toLocaleDateString('en-US', {month:'short', year:'numeric'});
+    document.getElementById('savings-result').classList.add('show');
+  }
+</script>
+</body>
+</html>

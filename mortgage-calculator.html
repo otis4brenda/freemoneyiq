@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mortgage Payment Calculator — Free, Instant & Accurate | FreeMoneyIQ</title>
+  <meta name="description" content="Calculate your exact monthly mortgage payment in seconds. Free mortgage calculator with amortization breakdown. No sign-up required." />
+  <meta name="keywords" content="mortgage calculator, monthly mortgage payment, mortgage payment calculator, how much is my mortgage payment" />
+  <link rel="canonical" href="https://freemoneyiq.com/mortgage-calculator.html" />
+  <meta property="og:title" content="Free Mortgage Payment Calculator | FreeMoneyIQ" />
+  <meta property="og:description" content="Calculate your exact monthly mortgage payment in seconds. Free, no sign-up required." />
+  <meta property="og:url" content="https://freemoneyiq.com/mortgage-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta name="google-site-verification" content="yabzf5B-tALqjmJeuyczFJ1A_9VaFGuPrvecgYedLaU" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDKB4113HX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LDKB4113HX');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is included in a monthly mortgage payment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A monthly mortgage payment typically includes principal (paying down your loan balance), interest (the lender's fee), property taxes (often escrowed), and homeowner's insurance. This combination is commonly called PITI. Some loans also include PMI (private mortgage insurance) if your down payment is less than 20%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a $300,000 mortgage cost per month?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At a 6.8% interest rate on a 30-year fixed mortgage, a $300,000 loan has a principal and interest payment of approximately $1,956 per month. Adding estimated property taxes and insurance, total monthly costs typically run $2,300–$2,600 depending on your location."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a higher down payment lower my mortgage payment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — a larger down payment reduces your loan amount, which directly lowers your monthly payment. It can also eliminate PMI (which kicks in when you put less than 20% down), saving you an additional $50–$200 per month on average."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between principal and interest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Principal is the amount you borrowed and are paying back. Interest is the fee your lender charges for the loan, expressed as a percentage of your remaining balance. In the early years of a mortgage, most of your payment goes toward interest. Over time, more goes toward principal — this is called amortization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I lower my monthly mortgage payment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most effective ways to lower your payment are: make a larger down payment, secure a lower interest rate (by improving your credit score or shopping lenders), choose a longer loan term (30 vs 15 years), or refinance if rates drop after you've already purchased. You can also appeal your property tax assessment to reduce that portion."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the Mortgage Payment Calculator",
+    "description": "Calculate your estimated monthly mortgage payment in under 60 seconds.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Enter your home price and down payment",
+        "text": "Type in the total home purchase price and how much you plan to put down. The calculator will determine your loan amount automatically."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Enter your interest rate and loan term",
+        "text": "Input your current interest rate (check with your lender or use today's average of ~6.8%) and choose your loan term — typically 15 or 30 years."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Add property tax estimate",
+        "text": "Enter your estimated annual property tax. Your county assessor's website can give you an accurate figure; $4,800/year is a common national average."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Click Calculate and review your breakdown",
+        "text": "Hit 'Calculate My Payment' to see your full monthly payment including principal, interest, and taxes, plus total interest paid over the life of the loan."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a6cf6; --primary-dark: #1452c8; --accent: #00c9a7;
+      --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
+      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,108,246,0.08);
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+    .hero { background: linear-gradient(135deg, #1a6cf6 0%, #00c9a7 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+    .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; text-align: center; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin: 32px auto; border: 1px solid var(--border); max-width: 700px; }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0f7ff, #e8fff8); border: 1px solid #c3dffe; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .content-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 12px; margin-top: 32px; }
+    .content-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .faq-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 12px; background: var(--card); }
+    .faq-item h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+    .related-calcs { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .related-calcs h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s; display: block; }
+    .related-card:hover { box-shadow: var(--shadow); }
+    .related-card .icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .related-card .name { font-size: 0.85rem; font-weight: 600; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 32px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Free<span>MoneyIQ</span></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/mortgage-calculator.html" class="active">Mortgage</a>
+    <a href="/loan-payoff-calculator.html">Loan</a>
+    <a href="/savings-goal-calculator.html">Savings</a>
+    <a href="/freelancer-rate-calculator.html">Freelance Rate</a>
+    <a href="/compound-interest-calculator.html">Compound</a>
+    <a href="/tax-withholding-calculator.html">Tax</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>🏠 Free Mortgage Payment Calculator</h1>
+  <p>Find out exactly what your monthly mortgage payment will be — including principal, interest, taxes, and a full breakdown.</p>
+</div>
+
+<div class="container">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="calc-panel">
+    <h2>🏠 Mortgage Payment Calculator</h2>
+    <p class="subtitle">Enter your loan details below to calculate your estimated monthly payment instantly.</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Home Price ($)</label>
+        <input type="number" id="m-price" placeholder="e.g. 350000" value="350000" />
+      </div>
+      <div class="form-group">
+        <label>Down Payment ($)</label>
+        <input type="number" id="m-down" placeholder="e.g. 70000" value="70000" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Loan Term (years)</label>
+        <select id="m-term">
+          <option value="30" selected>30 years</option>
+          <option value="20">20 years</option>
+          <option value="15">15 years</option>
+          <option value="10">10 years</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Annual Interest Rate (%)</label>
+        <input type="number" id="m-rate" placeholder="e.g. 6.8" value="6.8" step="0.1" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Property Tax ($/year)</label>
+      <input type="number" id="m-tax" placeholder="e.g. 4800" value="4800" />
+    </div>
+    <button class="calc-btn" onclick="calcMortgage()">Calculate My Payment</button>
+    <div id="mortgage-result" class="result-box">
+      <div class="result-main" id="m-monthly"></div>
+      <div class="result-label">Estimated Monthly Payment</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Principal & Interest</div><div class="value" id="m-pi"></div></div>
+        <div class="result-item"><div class="label">Property Tax</div><div class="value" id="m-taxmo"></div></div>
+        <div class="result-item"><div class="label">Loan Amount</div><div class="value" id="m-loan"></div></div>
+        <div class="result-item"><div class="label">Total Interest Paid</div><div class="value" id="m-totalint"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- AIO Content -->
+<div class="content-section">
+  <h2>How to Calculate Your Monthly Mortgage Payment</h2>
+  <p>Your monthly mortgage payment is determined by four main variables: your loan amount, interest rate, loan term, and property taxes. The core formula uses your principal and interest to calculate a fixed monthly payment that pays off the loan over the chosen term. According to Freddie Mac, the average 30-year fixed mortgage rate in early 2026 is approximately 6.8%, which is the default used in this calculator.</p>
+  <p>The math behind it is called amortization — each monthly payment covers that month's interest first, then the remainder chips away at your principal. In the early years of a 30-year mortgage, roughly 80% of your payment goes to interest. By year 25, that flips.</p>
+
+  <h2>What Is a Good Monthly Mortgage Payment?</h2>
+  <p>A widely used rule of thumb is that your housing costs should not exceed 28% of your gross monthly income. So if you earn $6,000/month before taxes, keeping your mortgage payment under $1,680 is considered financially healthy. Many lenders use this same benchmark when qualifying borrowers.</p>
+  <p>That said, what's "good" depends on your full financial picture. If you have no other debt, you may comfortably stretch to 33–35%. If you have significant student loans or car payments, staying closer to 25% gives you more breathing room.</p>
+
+  <h2>What Factors Affect Your Mortgage Payment?</h2>
+  <p>Five things have the biggest impact on your monthly payment: loan amount, interest rate, loan term, property taxes, and whether you need PMI. Of these, your interest rate has the most leverage — a 1% difference on a $300,000 loan changes your payment by roughly $180/month and over $60,000 in total interest over 30 years.</p>
+  <p>Your credit score is the primary driver of your interest rate. According to FICO data, borrowers with scores above 760 typically receive rates 0.5–1.5% lower than borrowers in the 620–639 range — a difference that can cost or save tens of thousands over a loan's life.</p>
+
+  <h2>How Much House Can I Afford in 2026?</h2>
+  <p>A general guideline is to keep your total home price at or below 3–5x your annual gross income. On a $100,000 salary, that's a $300,000–$500,000 home. However, with rates at 6.8%, affordability is tighter than it was in 2020–2021 when rates sat near 3%. Use this calculator to work backwards — plug in what you can afford monthly and adjust the home price accordingly.</p>
+  <p>Don't forget closing costs (typically 2–5% of the loan), moving expenses, and an emergency fund for home repairs. Most financial advisors recommend having 1–3% of your home's value set aside annually for maintenance.</p>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>What is included in a monthly mortgage payment?</h3>
+    <p>A monthly mortgage payment typically includes principal, interest, property taxes (if escrowed), and homeowner's insurance — together called PITI. If your down payment is less than 20%, you'll likely also pay PMI (private mortgage insurance), which adds $50–$200/month until you reach 20% equity.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How much does a $300,000 mortgage cost per month?</h3>
+    <p>At 6.8% on a 30-year term, a $300,000 loan has a principal and interest payment of about $1,956/month. With property taxes and insurance added, total monthly costs typically run $2,300–$2,600 depending on your location.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Does a higher down payment lower my mortgage payment?</h3>
+    <p>Yes — a larger down payment reduces your loan amount and thus your monthly payment. It can also eliminate PMI if you reach 20% down, saving an additional $50–$200/month.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What is the difference between principal and interest?</h3>
+    <p>Principal is the loan balance you're paying down. Interest is the lender's fee for the loan. Early in a mortgage, most of your payment goes to interest. Over time, more shifts to principal — this is amortization.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How do I lower my monthly mortgage payment?</h3>
+    <p>Make a larger down payment, improve your credit score to get a better rate, choose a longer loan term, or refinance when rates drop. You can also appeal your property tax assessment to reduce that portion of your payment.</p>
+  </div>
+</div>
+
+<div class="related-calcs">
+  <h2>Other Free Calculators</h2>
+  <div class="related-grid">
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon">💳</div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon">🐖</div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon">💼</div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon">📈</div><div class="name">Compound Interest Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon">🧾</div><div class="name">Tax Withholding Calculator</div></a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 FreeMoneyIQ — Free Finance Calculators</p>
+  <p style="margin-top:8px"><a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/about.html">About</a></p>
+</footer>
+
+<script>
+  function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+  function fmt2(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  function calcMortgage() {
+    const price = +document.getElementById('m-price').value;
+    const down  = +document.getElementById('m-down').value;
+    const term  = +document.getElementById('m-term').value;
+    const rate  = +document.getElementById('m-rate').value / 100 / 12;
+    const tax   = +document.getElementById('m-tax').value / 12;
+    const loan  = price - down;
+    const n     = term * 12;
+    const pi    = rate === 0 ? loan/n : loan * rate * Math.pow(1+rate,n) / (Math.pow(1+rate,n)-1);
+    const monthly = pi + tax;
+    const totalInt = (pi * n) - loan;
+    document.getElementById('m-monthly').textContent = fmt2(monthly);
+    document.getElementById('m-pi').textContent = fmt2(pi);
+    document.getElementById('m-taxmo').textContent = fmt2(tax);
+    document.getElementById('m-loan').textContent = fmt(loan);
+    document.getElementById('m-totalint').textContent = fmt(totalInt);
+    document.getElementById('mortgage-result').classList.add('show');
+  }
+</script>
+</body>
+</html>

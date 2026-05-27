@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loan Payoff Calculator — Free Early Payoff Calculator | FreeMoneyIQ</title>
+  <meta name="description" content="Calculate exactly when you'll pay off any loan and how much interest you'll save by making extra payments. Free, instant, no sign-up." />
+  <meta name="keywords" content="loan payoff calculator, early loan payoff, extra payment calculator, pay off loan faster, loan interest calculator" />
+  <link rel="canonical" href="https://freemoneyiq.com/loan-payoff-calculator.html" />
+  <meta property="og:title" content="Free Loan Payoff Calculator | FreeMoneyIQ" />
+  <meta property="og:description" content="Calculate exactly when you'll pay off any loan and how much interest you'll save by making extra payments. Free, instant, no sign-up." />
+  <meta property="og:url" content="https://freemoneyiq.com/loan-payoff-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta name="google-site-verification" content="yabzf5B-tALqjmJeuyczFJ1A_9VaFGuPrvecgYedLaU" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDKB4113HX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LDKB4113HX');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a loan payoff calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A loan payoff calculator tells you exactly how many months it will take to pay off a loan given your current balance, interest rate, and monthly payment. It also shows your total interest paid and lets you model how extra payments shorten your timeline and reduce interest costs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do extra payments help pay off a loan faster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Extra payments go directly toward your principal balance, which reduces the amount of interest that accrues each month. For example, adding just $100/month to a $25,000 car loan at 7.5% can shave over a year off your payoff timeline and save $800+ in interest. The earlier you make extra payments, the more you save."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I pay off my loan faster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most effective strategies include: making bi-weekly instead of monthly payments (which adds one full extra payment per year), rounding up your payment to the nearest $50 or $100, applying tax refunds or bonuses as lump-sum payments, and refinancing to a lower interest rate. Even small increases in your monthly payment compound significantly over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good interest rate for a loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A good interest rate depends on the loan type. For auto loans in 2026, rates below 5% are excellent, 6–8% is average, and above 10% is high. For personal loans, below 10% is competitive. Credit cards typically run 20–29% APR. Your credit score is the biggest factor — borrowers with 720+ scores get the best rates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to pay off a $20,000 loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At 7.5% interest with a $400/month payment, a $20,000 loan takes about 62 months (just over 5 years) to pay off with $4,500 in total interest. Increase your payment to $500/month and you pay it off in 47 months, saving over $1,000 in interest. Use the calculator above to model your exact scenario."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the Loan Payoff Calculator",
+    "description": "Calculate your loan payoff timeline and interest savings in under 60 seconds.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Enter your current loan balance",
+        "text": "Input your remaining loan balance — this is the amount you still owe, not the original loan amount. Check your most recent statement for the exact payoff balance."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Enter your interest rate and monthly payment",
+        "text": "Input your annual interest rate (found on your loan agreement or statement) and your current monthly payment amount."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Add an extra monthly payment amount",
+        "text": "Enter any additional amount you could add to each monthly payment. Even $50–$100 extra per month can dramatically reduce your payoff timeline."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Click Calculate and compare your results",
+        "text": "Hit 'Calculate Payoff' to see your standard payoff date and how much faster you'd pay off the loan with extra payments, including total interest saved."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a6cf6; --primary-dark: #1452c8; --accent: #00c9a7;
+      --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
+      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,108,246,0.08);
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+    .hero { background: linear-gradient(135deg, #1a6cf6 0%, #00c9a7 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+    .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; text-align: center; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin: 32px auto; border: 1px solid var(--border); max-width: 700px; }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0f7ff, #e8fff8); border: 1px solid #c3dffe; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .savings-highlight { background: linear-gradient(135deg, #e8fff8, #d1fae5); border: 1px solid #6ee7b7; border-radius: var(--radius); padding: 16px 24px; margin-top: 16px; }
+    .savings-highlight .sh-label { font-size: 0.85rem; color: #065f46; margin-bottom: 4px; font-weight: 600; }
+    .savings-highlight .sh-value { font-size: 1.4rem; font-weight: 800; color: #047857; }
+    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .content-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 12px; margin-top: 32px; }
+    .content-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .faq-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 12px; background: var(--card); }
+    .faq-item h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+    .related-calcs { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .related-calcs h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s; display: block; }
+    .related-card:hover { box-shadow: var(--shadow); }
+    .related-card .icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .related-card .name { font-size: 0.85rem; font-weight: 600; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 32px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Free<span>MoneyIQ</span></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/mortgage-calculator.html">Mortgage</a>
+    <a href="/loan-payoff-calculator.html" class="active">Loan</a>
+    <a href="/savings-goal-calculator.html">Savings</a>
+    <a href="/freelancer-rate-calculator.html">Freelance Rate</a>
+    <a href="/compound-interest-calculator.html">Compound</a>
+    <a href="/tax-withholding-calculator.html">Tax</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>💳 Free Loan Payoff Calculator</h1>
+  <p>See exactly when you'll pay off your loan and how much you save by making extra payments. Instant results, no sign-up needed.</p>
+</div>
+
+<div class="container">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="calc-panel">
+    <h2>💳 Loan Payoff Calculator</h2>
+    <p class="subtitle">Enter your loan details to see your payoff date and how extra payments save you money.</p>
+
+    <div class="form-group">
+      <label>Loan Balance ($)</label>
+      <input type="number" id="l-balance" placeholder="e.g. 25000" value="25000" />
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Annual Interest Rate (%)</label>
+        <input type="number" id="l-rate" placeholder="e.g. 7.5" value="7.5" step="0.1" />
+      </div>
+      <div class="form-group">
+        <label>Monthly Payment ($)</label>
+        <input type="number" id="l-payment" placeholder="e.g. 500" value="500" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Extra Monthly Payment ($) <em style="font-weight:400;color:var(--muted);">— optional, to see savings</em></label>
+      <input type="number" id="l-extra" placeholder="e.g. 100" value="0" />
+    </div>
+
+    <button class="calc-btn" onclick="calcLoan()">Calculate Payoff</button>
+
+    <div id="loan-result" class="result-box">
+      <div class="result-main" id="l-months"></div>
+      <div class="result-label">Time to Pay Off (standard payment)</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Total Paid</div><div class="value" id="l-total"></div></div>
+        <div class="result-item"><div class="label">Total Interest</div><div class="value" id="l-interest"></div></div>
+        <div class="result-item"><div class="label">Payoff Date</div><div class="value" id="l-date"></div></div>
+        <div class="result-item"><div class="label">Interest % of Loan</div><div class="value" id="l-pct"></div></div>
+      </div>
+      <div id="l-extra-block" class="savings-highlight" style="display:none;">
+        <div class="sh-label">💰 With extra payments — you pay off <span id="l-months-saved"></span> sooner and save:</div>
+        <div class="sh-value" id="l-interest-saved"></div>
+      </div>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- Content -->
+<div class="content-section">
+  <h2>Why Paying Off Loans Early Saves You Thousands</h2>
+  <p>Most loans — car loans, personal loans, student loans — use simple interest amortization. This means each month's interest is calculated on your remaining balance. The faster you knock that balance down, the less interest you owe. A $25,000 car loan at 7.5% with a $500 monthly payment costs you nearly $5,700 in total interest over 62 months. Add just $100/month and you finish in 50 months and save over $1,000 — with virtually no lifestyle sacrifice.</p>
+  <p>The early months of a loan are when extra payments have the most impact. In month one, most of your payment goes to interest. By reducing the principal early, you shift every future payment so that more goes toward the balance and less to the bank. This "interest snowball" effect grows the longer you have on your loan.</p>
+
+  <h2>The Debt Snowball vs. Debt Avalanche: Which Works Best?</h2>
+  <p>If you have multiple loans, two popular strategies help you pay them off systematically. The <strong>debt avalanche</strong> method targets the highest-interest loan first — mathematically optimal because you minimize total interest paid. The <strong>debt snowball</strong> method targets the smallest balance first regardless of rate, giving you quick psychological wins that keep motivation high. Research from Harvard Business Review suggests the snowball method leads to higher overall repayment rates because of this motivation factor.</p>
+  <p>Neither method is universally "right" — the best strategy is the one you'll actually stick to. Use this calculator to model what happens if you throw extra money at each individual loan and decide what makes sense for your situation. Many people combine the approaches: avalanche for high-interest debt (credit cards at 20%+), snowball for smaller balances.</p>
+
+  <h2>Smart Ways to Make Extra Loan Payments</h2>
+  <p>You don't have to dramatically change your lifestyle to pay loans off faster. Start by rounding up your monthly payment — if your payment is $427, pay $475 or $500. Over a year, this adds the equivalent of one to two extra payments. Another powerful trick is switching to bi-weekly payments: instead of 12 monthly payments, you make 26 half-payments, which equals 13 full payments per year at no extra budgeting effort. Many lenders allow this for free.</p>
+  <p>Windfalls — tax refunds, bonuses, side income — are ideal for lump-sum extra payments. Apply them directly to your principal (make sure to specify this with your lender). Even one $1,000 lump sum mid-loan can save hundreds in interest and shave months off your timeline. The calculator above lets you model a consistent extra monthly amount — use it to find a number that fits your budget and see your personalized savings.</p>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>What is a loan payoff calculator?</h3>
+    <p>A loan payoff calculator tells you exactly how many months it will take to pay off a loan given your balance, interest rate, and monthly payment. It also shows total interest paid and models the impact of extra payments so you can see exactly how much money you'd save.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How do extra payments help pay off a loan faster?</h3>
+    <p>Extra payments go directly toward your principal balance, reducing the amount interest accrues against each month. Even $50–$100 extra per month on a $25,000 loan can shave a year off your payoff timeline and save $800+ in interest. The earlier you start, the bigger the impact.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How can I pay off my loan faster?</h3>
+    <p>Make bi-weekly payments instead of monthly (adds one free extra payment per year), round up your monthly payment, apply tax refunds and bonuses as lump-sum principal payments, and refinance to a lower rate if possible. Any consistent extra payment accelerates your payoff significantly.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What is a good interest rate for a personal or auto loan?</h3>
+    <p>For auto loans in 2026, below 5% is excellent, 6–8% is average, above 10% is high. For personal loans, below 10% is competitive. Your credit score is the biggest factor — a 720+ score typically unlocks the best rates. Always shop multiple lenders before accepting an offer.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How long does it take to pay off a $20,000 loan?</h3>
+    <p>At 7.5% interest with a $400/month payment, a $20,000 loan takes about 62 months (just over 5 years) with ~$4,500 in total interest. Increase to $500/month and you pay it off in 47 months, saving over $1,000. Use the calculator above to model your exact balance, rate, and payment.</p>
+  </div>
+</div>
+
+<div class="related-calcs">
+  <h2>Other Free Calculators</h2>
+  <div class="related-grid">
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon">🏠</div><div class="name">Mortgage Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon">🐖</div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon">💼</div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon">📈</div><div class="name">Compound Interest Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon">🧾</div><div class="name">Tax Withholding Calculator</div></a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 FreeMoneyIQ — Free Finance Calculators</p>
+  <p style="margin-top:8px"><a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/about.html">About</a></p>
+</footer>
+
+<script>
+  function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+  function fmt2(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  function payoffMonths(balance, rate, payment) {
+    if (payment <= balance * rate) return null;
+    let months = 0, totalPaid = 0, b = balance;
+    while (b > 0 && months < 600) {
+      const interest = b * rate;
+      b = b + interest - payment;
+      if (b < 0) { totalPaid += payment + b; b = 0; } else { totalPaid += payment; }
+      months++;
+    }
+    return { months, totalPaid };
+  }
+
+  function calcLoan() {
+    const balance = +document.getElementById('l-balance').value;
+    const rate    = +document.getElementById('l-rate').value / 100 / 12;
+    const payment = +document.getElementById('l-payment').value;
+    const extra   = +document.getElementById('l-extra').value || 0;
+
+    const base = payoffMonths(balance, rate, payment);
+    if (!base) {
+      document.getElementById('l-months').textContent = 'Payment too low to cover interest';
+      document.getElementById('loan-result').classList.add('show');
+      return;
+    }
+
+    const { months, totalPaid } = base;
+    const totalInterest = totalPaid - balance;
+    const payoffDate = new Date();
+    payoffDate.setMonth(payoffDate.getMonth() + months);
+
+    document.getElementById('l-months').textContent = months >= 12
+      ? Math.floor(months/12) + 'y ' + (months%12) + 'm'
+      : months + ' months';
+    document.getElementById('l-total').textContent = fmt(totalPaid);
+    document.getElementById('l-interest').textContent = fmt(totalInterest);
+    document.getElementById('l-date').textContent = payoffDate.toLocaleDateString('en-US', {month:'short', year:'numeric'});
+    document.getElementById('l-pct').textContent = ((totalInterest/balance)*100).toFixed(1) + '%';
+
+    if (extra > 0) {
+      const withExtra = payoffMonths(balance, rate, payment + extra);
+      if (withExtra) {
+        const monthsSaved = months - withExtra.months;
+        const interestSaved = totalInterest - (withExtra.totalPaid - balance);
+        document.getElementById('l-months-saved').textContent =
+          monthsSaved >= 12
+            ? Math.floor(monthsSaved/12) + 'y ' + (monthsSaved%12) + 'm'
+            : monthsSaved + ' months';
+        document.getElementById('l-interest-saved').textContent = fmt(interestSaved) + ' in interest saved';
+        document.getElementById('l-extra-block').style.display = 'block';
+      }
+    } else {
+      document.getElementById('l-extra-block').style.display = 'none';
+    }
+
+    document.getElementById('loan-result').classList.add('show');
+  }
+</script>
+</body>
+</html>
