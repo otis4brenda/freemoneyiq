@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tax Withholding Calculator — Am I Having Enough Withheld? | FreeMoneyIQ</title>
+  <meta name="description" content="Find out if your employer is withholding the right amount of federal income tax. Avoid a surprise tax bill or a huge refund — dial in your W-4 withholding for free." />
+  <meta name="keywords" content="tax withholding calculator, W-4 calculator, federal income tax calculator, how much tax withheld, paycheck tax calculator, 2026 tax calculator" />
+  <link rel="canonical" href="https://freemoneyiq.com/tax-withholding-calculator.html" />
+  <meta property="og:title" content="Free Tax Withholding Calculator | FreeMoneyIQ" />
+  <meta property="og:description" content="Find out if your employer is withholding the right amount of federal income tax. Avoid a surprise tax bill or a huge refund — dial in your W-4 withholding for free." />
+  <meta property="og:url" content="https://freemoneyiq.com/tax-withholding-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta name="google-site-verification" content="yabzf5B-tALqjmJeuyczFJ1A_9VaFGuPrvecgYedLaU" />
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDKB4113HX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LDKB4113HX');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is tax withholding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tax withholding is the amount your employer deducts from each paycheck and sends directly to the IRS on your behalf. It's a pay-as-you-go system so you don't owe a lump sum in April. Your W-4 form tells your employer how much to withhold. If too little is withheld, you'll owe taxes (plus possible penalties) at filing. If too much is withheld, you get a refund — but you gave the government an interest-free loan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do I owe taxes even though my employer withholds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You may owe taxes at filing if you have multiple jobs, significant side income, investment income, or claimed too many allowances on your W-4. The withholding from your main job may not account for other income sources. Use this calculator to estimate your full-year tax liability and compare it to what's been withheld — then adjust your W-4 if there's a gap."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it better to get a big refund or owe a little?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Financially, owing a small amount (under $1,000) is optimal — it means your withholding was nearly perfect and you kept your money working for you all year. A large refund means you overpaid throughout the year and gave the IRS an interest-free loan. However, many people prefer the refund as a forced savings mechanism. Aim for within $500 of breaking even if you want to optimize."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I update my withholding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Submit a new W-4 form to your employer's HR or payroll department. On the 2020+ W-4, you can request an additional flat dollar amount withheld per paycheck (Step 4c), which is the simplest way to increase withholding if this calculator shows you'll owe. You can update your W-4 at any time during the year — changes typically take effect within 1–2 pay periods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the 2026 federal income tax brackets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the federal income tax brackets for single filers are: 10% on income up to $11,925; 12% on $11,926–$48,475; 22% on $48,476–$103,350; 24% on $103,351–$197,300; 32% on $197,301–$250,525; 35% on $250,526–$626,350; 37% on income over $626,350. For married filing jointly, the brackets are roughly double. The standard deduction for 2026 is $15,000 (single) or $30,000 (married filing jointly)."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the Tax Withholding Calculator",
+    "description": "Estimate your federal income tax liability and compare it to your current withholding in under 2 minutes.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Enter your annual income",
+        "text": "Input your gross annual salary or wages. If you have multiple jobs, include combined income. Add any side income, freelance, or investment income separately."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Select your filing status",
+        "text": "Choose Single, Married Filing Jointly, or Head of Household. This determines your standard deduction and which tax brackets apply."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Enter additional income and deductions",
+        "text": "Add any other taxable income (freelance, investments, rental). Enter deductions if you itemize — otherwise the standard deduction is applied automatically."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Enter your current withholding and calculate",
+        "text": "Put in your current per-paycheck withholding and pay frequency. The calculator shows your estimated tax bill vs. withholding and whether you'll owe or get a refund."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a6cf6; --primary-dark: #1452c8; --accent: #00c9a7;
+      --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
+      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,108,246,0.08);
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+    .hero { background: linear-gradient(135deg, #1a6cf6 0%, #00c9a7 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+    .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; text-align: center; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin: 32px auto; border: 1px solid var(--border); max-width: 700px; }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0f7ff, #e8fff8); border: 1px solid #c3dffe; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-main.owe { color: #dc2626; }
+    .result-main.refund { color: #16a34a; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .bracket-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 0.88rem; }
+    .bracket-table th { background: var(--primary); color: white; padding: 10px 12px; text-align: left; }
+    .bracket-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
+    .bracket-table tr.active-bracket td { background: #fef9c3; font-weight: 600; }
+    .verdict { text-align: center; padding: 16px; border-radius: 10px; margin-bottom: 16px; font-weight: 700; font-size: 1.05rem; }
+    .verdict.owe { background: #fee2e2; color: #dc2626; }
+    .verdict.refund { background: #dcfce7; color: #16a34a; }
+    .verdict.even { background: #f0fdf4; color: #15803d; }
+    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .content-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 12px; margin-top: 32px; }
+    .content-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .faq-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 12px; background: var(--card); }
+    .faq-item h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .faq-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+    .related-calcs { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .related-calcs h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s; display: block; }
+    .related-card:hover { box-shadow: var(--shadow); }
+    .related-card .icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .related-card .name { font-size: 0.85rem; font-weight: 600; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 32px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Free<span>MoneyIQ</span></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/mortgage-calculator.html">Mortgage</a>
+    <a href="/loan-payoff-calculator.html">Loan</a>
+    <a href="/savings-goal-calculator.html">Savings</a>
+    <a href="/freelancer-rate-calculator.html">Freelance Rate</a>
+    <a href="/compound-interest-calculator.html">Compound</a>
+    <a href="/tax-withholding-calculator.html" class="active">Tax</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>🧾 Free Tax Withholding Calculator</h1>
+  <p>Find out if you're having the right amount withheld from your paycheck — and avoid a surprise tax bill or an unnecessary giant refund.</p>
+</div>
+
+<div class="container">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="calc-panel">
+    <h2>🧾 Tax Withholding Calculator</h2>
+    <p class="subtitle">Estimate your 2026 federal income tax and compare it to what your employer is withholding.</p>
+
+    <div class="form-group">
+      <label>Filing Status</label>
+      <select id="tw-status">
+        <option value="single">Single</option>
+        <option value="married">Married Filing Jointly</option>
+        <option value="hoh">Head of Household</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Annual Gross Salary ($)</label>
+        <input type="number" id="tw-salary" placeholder="e.g. 65000" value="65000" />
+      </div>
+      <div class="form-group">
+        <label>Other Annual Income ($)</label>
+        <input type="number" id="tw-other" placeholder="e.g. 0" value="0" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Per-Paycheck Withholding ($)</label>
+        <input type="number" id="tw-perpay" placeholder="e.g. 200" value="200" />
+      </div>
+      <div class="form-group">
+        <label>Pay Frequency</label>
+        <select id="tw-freq">
+          <option value="52">Weekly</option>
+          <option value="26">Bi-Weekly</option>
+          <option value="24">Semi-Monthly</option>
+          <option value="12" selected>Monthly</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Additional Deductions ($) — leave 0 to use the standard deduction</label>
+      <input type="number" id="tw-deductions" placeholder="e.g. 0" value="0" />
+    </div>
+
+    <button class="calc-btn" onclick="calcTax()">Calculate My Withholding</button>
+
+    <div id="tw-result" class="result-box">
+      <div id="tw-verdict" class="verdict"></div>
+      <div class="result-main" id="tw-diff"></div>
+      <div class="result-label" id="tw-diff-label"></div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Estimated Tax Owed</div><div class="value" id="tw-tax"></div></div>
+        <div class="result-item"><div class="label">Total Withheld (Annual)</div><div class="value" id="tw-withheld"></div></div>
+        <div class="result-item"><div class="label">Taxable Income</div><div class="value" id="tw-taxable"></div></div>
+        <div class="result-item"><div class="label">Effective Tax Rate</div><div class="value" id="tw-effrate"></div></div>
+      </div>
+      <table class="bracket-table" id="tw-bracket-table">
+        <thead><tr><th>Bracket</th><th>Rate</th><th>You Pay</th></tr></thead>
+        <tbody id="tw-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- Content -->
+<div class="content-section">
+  <h2>Why Getting Your Withholding Right Actually Matters</h2>
+  <p>Most people treat their tax refund as a bonus — but it's not. It's money you overpaid the government throughout the year, interest-free. The average refund in 2025 was around $3,100. Invested at 7% annually, that $3,100 sitting in your pocket (instead of the IRS's) would have earned you about $217 over those 12 months. More importantly, getting withholding right means no April surprise — no scrambling to find $2,000 you don't have.</p>
+  <p>The ideal outcome: you owe less than $1,000 or get a refund under $1,000. That means your withholding nearly matched your actual tax liability. Use this calculator after any major life change — new job, marriage, divorce, having a child, starting side income, or buying a home — to make sure your W-4 still reflects your situation.</p>
+
+  <h2>Understanding the 2026 Tax Brackets</h2>
+  <p>The US uses a progressive tax system — you don't pay the same rate on every dollar. Your first dollars are taxed at 10%, the next chunk at 12%, and so on up to 37% for income above $626,350 (single). This is why your "tax bracket" is actually your marginal rate — the rate on your last dollar earned, not all your income. Most people's effective tax rate (total tax ÷ total income) is significantly lower than their bracket rate.</p>
+  <p>For 2026, the standard deduction is $15,000 for single filers and $30,000 for married filing jointly. That deduction comes off your income before any tax is calculated. So a single person earning $65,000 pays tax on $50,000 of taxable income — not the full $65,000. The calculator above applies the correct brackets and standard deduction automatically.</p>
+
+  <h2>How to Adjust Your W-4 After Using This Calculator</h2>
+  <p>If this calculator shows you'll owe money at tax time, the simplest fix is Step 4c on your W-4 — "Extra withholding." Divide your expected shortfall by the number of remaining pay periods in the year and enter that as an additional flat amount to withhold. For example, if you expect to owe $1,200 and have 20 pay periods left, add $60/paycheck to your withholding.</p>
+  <p>Submit your updated W-4 to HR or payroll — most employers let you do this online. Changes typically take effect within 1–2 pay periods. You can update your W-4 as many times as needed throughout the year. If your income or situation changes (new side gig, investment gains, spouse changed jobs), run this calculator again and adjust accordingly.</p>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>What is tax withholding?</h3>
+    <p>Tax withholding is the amount your employer deducts from each paycheck and sends to the IRS on your behalf. Your W-4 form controls how much is withheld. Too little = you owe in April (plus possible underpayment penalties). Too much = you get a refund but gave the IRS an interest-free loan all year.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Why do I owe taxes even though my employer withholds?</h3>
+    <p>Common reasons: multiple jobs where each employer withholds as if it's your only income, freelance/side income not subject to withholding, investment income (dividends, capital gains), or claiming too many allowances. This calculator helps you catch the gap before April.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is it better to get a big refund or owe a little?</h3>
+    <p>Financially, owing a small amount (under $1,000) is optimal — your withholding was nearly perfect and you kept your money working for you all year. A large refund means you overpaid the IRS interest-free. The $3,100 average refund invested at 7% = $217 you left on the table.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How do I update my withholding?</h3>
+    <p>Submit a new W-4 to your employer's HR or payroll department. Use Step 4c to request an additional flat dollar amount withheld per paycheck — the easiest way to correct a shortfall. Changes take effect within 1–2 pay periods. You can update anytime during the year.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What are the 2026 federal income tax brackets?</h3>
+    <p>Single filers: 10% up to $11,925 · 12% up to $48,475 · 22% up to $103,350 · 24% up to $197,300 · 32% up to $250,525 · 35% up to $626,350 · 37% above $626,350. Standard deduction: $15,000 (single) / $30,000 (married jointly). The calculator applies these automatically.</p>
+  </div>
+</div>
+
+<div class="related-calcs">
+  <h2>Other Free Calculators</h2>
+  <div class="related-grid">
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon">🏠</div><div class="name">Mortgage Calculator</div></a>
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon">💳</div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon">🐖</div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon">💼</div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon">📈</div><div class="name">Compound Interest Calculator</div></a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 FreeMoneyIQ — Free Finance Calculators</p>
+  <p style="margin-top:8px"><a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/about.html">About</a></p>
+</footer>
+
+<script>
+  function fmt(n) { return '$' + Math.round(Math.abs(n)).toLocaleString(); }
+
+  // 2026 Federal Tax Brackets
+  const BRACKETS = {
+    single:  [[11925,0.10],[48475,0.12],[103350,0.22],[197300,0.24],[250525,0.32],[626350,0.35],[Infinity,0.37]],
+    married: [[23850,0.10],[96950,0.12],[206700,0.22],[394600,0.24],[501050,0.32],[751600,0.35],[Infinity,0.37]],
+    hoh:     [[17000,0.10],[64850,0.12],[103350,0.22],[197300,0.24],[250500,0.32],[626350,0.35],[Infinity,0.37]]
+  };
+  const STD_DEDUCTION = { single: 15000, married: 30000, hoh: 22500 };
+
+  function calcTaxFromBrackets(taxable, status) {
+    const brackets = BRACKETS[status];
+    let tax = 0, prev = 0, rows = [];
+    for (let i = 0; i < brackets.length; i++) {
+      const [limit, rate] = brackets[i];
+      if (taxable <= prev) break;
+      const chunk = Math.min(taxable, limit) - prev;
+      const bracketTax = chunk * rate;
+      tax += bracketTax;
+      if (chunk > 0) {
+        const lo = fmt(prev + 1);
+        const hi = limit === Infinity ? 'and above' : fmt(limit);
+        rows.push({ label: `${lo} – ${hi}`, rate: (rate*100)+'%', tax: fmt(bracketTax), active: taxable > prev && taxable <= limit });
+      }
+      prev = limit;
+    }
+    return { tax, rows };
+  }
+
+  function calcTax() {
+    const status     = document.getElementById('tw-status').value;
+    const salary     = +document.getElementById('tw-salary').value || 0;
+    const other      = +document.getElementById('tw-other').value || 0;
+    const perpay     = +document.getElementById('tw-perpay').value || 0;
+    const freq       = +document.getElementById('tw-freq').value;
+    const extraDed   = +document.getElementById('tw-deductions').value || 0;
+
+    const grossIncome = salary + other;
+    const stdDed = STD_DEDUCTION[status];
+    const totalDed = Math.max(stdDed, extraDed);
+    const taxable = Math.max(0, grossIncome - totalDed);
+    const { tax, rows } = calcTaxFromBrackets(taxable, status);
+    const withheld = perpay * freq;
+    const diff = withheld - tax;
+
+    document.getElementById('tw-tax').textContent = fmt(tax);
+    document.getElementById('tw-withheld').textContent = fmt(withheld);
+    document.getElementById('tw-taxable').textContent = fmt(taxable);
+    document.getElementById('tw-effrate').textContent = grossIncome > 0 ? (tax / grossIncome * 100).toFixed(1) + '%' : '0%';
+
+    const diffEl = document.getElementById('tw-diff');
+    const labelEl = document.getElementById('tw-diff-label');
+    const verdictEl = document.getElementById('tw-verdict');
+    diffEl.className = 'result-main';
+
+    if (diff > 50) {
+      diffEl.textContent = fmt(diff);
+      diffEl.classList.add('refund');
+      labelEl.textContent = 'Estimated Refund';
+      verdictEl.textContent = '✅ You\'re on track for a refund — consider adjusting W-4 to keep more each paycheck.';
+      verdictEl.className = 'verdict refund';
+    } else if (diff < -50) {
+      diffEl.textContent = fmt(diff);
+      diffEl.classList.add('owe');
+      labelEl.textContent = 'Estimated Amount You\'ll Owe';
+      verdictEl.textContent = '⚠️ You may owe taxes at filing — consider increasing your W-4 withholding.';
+      verdictEl.className = 'verdict owe';
+    } else {
+      diffEl.textContent = 'Nearly Even';
+      labelEl.textContent = 'Your withholding is well-calibrated!';
+      verdictEl.textContent = '🎯 Your withholding is dialed in — you\'re within $50 of breaking even.';
+      verdictEl.className = 'verdict even';
+    }
+
+    const tbody = document.getElementById('tw-tbody');
+    tbody.innerHTML = '';
+    rows.forEach(r => {
+      const tr = document.createElement('tr');
+      if (r.active) tr.className = 'active-bracket';
+      tr.innerHTML = `<td>${r.label}</td><td>${r.rate}</td><td>${r.tax}</td>`;
+      tbody.appendChild(tr);
+    });
+
+    document.getElementById('tw-result').classList.add('show');
+  }
+</script>
+</body>
+</html>
