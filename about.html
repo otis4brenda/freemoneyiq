@@ -3,36 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About FreeMoneyIQ — Free Finance Calculators</title>
-  <meta name="description" content="FreeMoneyIQ provides free, accurate finance calculators to help everyday people make smarter money decisions." />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --primary: #1a6cf6; --accent: #00c9a7; --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280; --border: #e5e7eb; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
-    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; }
-    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-    .nav-logo span { color: var(--accent); }
-    .container { max-width: 700px; margin: 48px auto; padding: 0 24px; }
-    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
-    p { color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
-    footer { text-align: center; padding: 32px; color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); }
-  </style>
+  <title>About FreeMoneyIQ — Free Finance Calculators & Personal Finance Guides</title>
+  <meta name="description" content="FreeMoneyIQ is an independent, free finance calculator hub built for everyday people. No sign-up, no data collection, no sales pitch. Just honest tools and plain-language guides." />
+  <link rel="canonical" href="https://freemoneyiq.com/about.html" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDKB4113HX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LDKB4113HX');</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--primary:#1a6b3c;--accent:#f59e0b;--bg:#f3f9f7;--card:#ffffff;--text:#1a2e25;--muted:#6b7280;--border:#d1e8df;--radius:12px;--shadow:0 2px 16px rgba(26,107,60,0.08);}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);}
+    nav{background:var(--card);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.06);}
+    .nav-logo{font-size:1.25rem;font-weight:700;color:var(--primary);text-decoration:none;}
+    .nav-logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:20px;}
+    .nav-links a{text-decoration:none;color:var(--muted);font-size:0.85rem;font-weight:500;}
+    .nav-links a:hover{color:var(--primary);}
+    .page-hero{background:linear-gradient(135deg,#1a6b3c,#0d4a28);color:white;text-align:center;padding:44px 24px 36px;}
+    .page-hero h1{font-size:2rem;font-weight:800;margin-bottom:10px;}
+    .page-hero p{font-size:1rem;opacity:0.9;max-width:520px;margin:0 auto;}
+    .container{max-width:720px;margin:0 auto;padding:40px 20px;}
+    .content-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:36px;border:1px solid var(--border);margin-bottom:24px;}
+    .content-card h2{font-size:1.2rem;font-weight:700;margin-bottom:14px;color:var(--primary);}
+    .content-card p{font-size:0.93rem;line-height:1.75;color:#374151;margin-bottom:14px;}
+    .content-card p:last-child{margin-bottom:0;}
+    .trust-list{list-style:none;padding:0;}
+    .trust-list li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:0.93rem;color:#374151;line-height:1.5;}
+    .trust-list li:last-child{border-bottom:none;}
+    .trust-list li span:first-child{font-size:1.3rem;flex-shrink:0;}
+    .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px;}
+    .calc-link{display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--text);font-size:0.88rem;font-weight:600;transition:border-color 0.2s,background 0.2s;}
+    .calc-link:hover{border-color:var(--primary);background:#e8f5ee;}
+    footer{background:var(--text);color:#9ca3af;text-align:center;padding:28px 24px;font-size:0.85rem;margin-top:48px;}
+    footer a{color:#9ca3af;text-decoration:none;}
+    footer a:hover{color:white;}
+    @media(max-width:600px){.nav-links{display:none;}}
+  </style>
 </head>
 <body>
-<nav><a class="nav-logo" href="index.html">Free<span>MoneyIQ</span></a></nav>
-<div class="container">
+<nav>
+  <a class="nav-logo" href="/">FreeMoney<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="/mortgage-calculator.html">Mortgage</a>
+    <a href="/loan-payoff-calculator.html">Loan Payoff</a>
+    <a href="/savings-goal-calculator.html">Savings</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+<div class="page-hero">
   <h1>About FreeMoneyIQ</h1>
-  <p>FreeMoneyIQ is a free collection of finance calculators built to help everyday people understand their money — without signing up, paying, or sitting through a sales pitch.</p>
-  <p>We believe financial clarity shouldn't be gated behind expensive software or complicated spreadsheets. Whether you're buying a home, paying off debt, planning for retirement, or figuring out what to charge as a freelancer — our tools give you fast, accurate answers.</p>
-  <p>All calculations are performed in your browser. We don't collect or store any data you enter.</p>
-  <p><strong>Disclaimer:</strong> FreeMoneyIQ is for informational purposes only. Results are estimates. Always consult a qualified financial professional before making major financial decisions.</p>
+  <p>We built the finance tools we wished existed — honest, fast, and completely free.</p>
 </div>
-<footer style="background:#1a1a2e; color:#9ca3af; text-align:center; padding:32px 24px; font-size:0.85rem; margin-top:48px;">
-  <p>&copy; 2026 FreeMoneyIQ — All Rights Reserved</p>
-  <p style="margin-top:8px"><a href="/index.html" style="color:#9ca3af;">Home</a> &nbsp;·&nbsp; <a href="/about.html" style="color:#9ca3af;">About</a> &nbsp;·&nbsp; <a href="/privacy.html" style="color:#9ca3af;">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:#9ca3af;">Terms of Use</a></p>
-  <p style="margin-top:8px"><a href="/privacy.html" style="color:#9ca3af;">Privacy Policy</a> &nbsp;·&nbsp; <a href="/index.html" style="color:#9ca3af;">Home</a></p>
-  <p style="margin-top:10px; font-size:0.78rem; color:#6b7280; max-width:600px; margin-left:auto; margin-right:auto;">💡 <em>Heads up: some links on this site may be affiliate links — meaning if you click and make a purchase, we might earn a small commission at no extra cost to you. We only point you toward tools and resources we genuinely think are useful. No pressure, no obligation — just helpful info, always free.</em></p>
+<div class="container">
+
+  <div class="content-card">
+    <h2>Why We Built This</h2>
+    <p>Personal finance decisions — buying a home, paying off debt, planning savings goals, setting a freelance rate — are some of the most important financial choices people make. Yet the tools available to help with those decisions are often paywalled, buried in lead-generation funnels, or designed to push you toward a product rather than inform your decision.</p>
+    <p>FreeMoneyIQ was built to be different. We created a set of straightforward, accurate calculators and plain-language guides that give you real answers based on your real situation — with no email required, no account, no sales pitch, and no data sold to financial services companies. You use the tool, get your answer, and walk away informed.</p>
+    <p>Our goal is simple: make financial clarity accessible to everyone, regardless of income, background, or financial sophistication. Whether you're buying your first home, figuring out how to escape debt, or planning a savings goal for the first time — these tools are for you.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Our Calculators</h2>
+    <p>FreeMoneyIQ offers six free calculators covering the most common personal finance decisions:</p>
+    <div class="calc-grid">
+      <a class="calc-link" href="/mortgage-calculator.html">🏠 Mortgage Calculator</a>
+      <a class="calc-link" href="/loan-payoff-calculator.html">💳 Loan Payoff Calculator</a>
+      <a class="calc-link" href="/savings-goal-calculator.html">🎯 Savings Goal Calculator</a>
+      <a class="calc-link" href="/freelancer-rate-calculator.html">💼 Freelancer Rate Calculator</a>
+      <a class="calc-link" href="/compound-interest-calculator.html">📈 Compound Interest Calculator</a>
+      <a class="calc-link" href="/tax-withholding-calculator.html">🧾 Tax Withholding Calculator</a>
+    </div>
+    <p style="margin-top:16px;">Every calculator runs entirely in your browser. No data is transmitted, stored, or shared. Your financial information stays yours.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Our Principles</h2>
+    <ul class="trust-list">
+      <li><span>🔒</span><span><strong>No personal data collected.</strong> Every calculation runs entirely in your browser. Nothing is sent to our servers or any third party. Ever.</span></li>
+      <li><span>🚫</span><span><strong>Not affiliated with any financial institution.</strong> We don't receive commissions, referral fees, or payments from lenders, banks, or financial advisors. Our tools give you independent estimates.</span></li>
+      <li><span>📊</span><span><strong>Based on real data.</strong> Our calculators use current 2026 tax tables, benchmark mortgage rates, and real financial formulas — not rough approximations.</span></li>
+      <li><span>💡</span><span><strong>Plain language only.</strong> We explain every term and every result in everyday English. No jargon without explanation, no acronyms left undefined.</span></li>
+      <li><span>🔄</span><span><strong>Kept current.</strong> Our calculators and guides are reviewed and updated regularly to reflect current tax laws, interest rate environments, and financial best practices.</span></li>
+      <li><span>✅</span><span><strong>Always free.</strong> No paywalls, no premium tiers, no subscription required. Every tool, every guide, permanently free.</span></li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h2>Our Personal Finance Blog</h2>
+    <p>Beyond our calculators, FreeMoneyIQ publishes plain-language personal finance guides on the topics our readers care most about. Recent articles include:</p>
+    <ul style="margin:12px 0 0 20px;color:#374151;">
+      <li><a href="/blog/how-to-pay-off-debt-fast.html" style="color:var(--primary);">How to Pay Off Debt Fast: 7 Proven Strategies</a></li>
+      <li><a href="/blog/what-is-compound-interest.html" style="color:var(--primary);">What Is Compound Interest and How Does It Work?</a></li>
+      <li><a href="/blog/how-much-house-can-i-afford.html" style="color:var(--primary);">How Much House Can I Afford in 2026?</a></li>
+      <li><a href="/blog/how-to-set-a-savings-goal.html" style="color:var(--primary);">How to Set a Savings Goal You'll Actually Reach</a></li>
+      <li><a href="/blog/what-is-tax-withholding.html" style="color:var(--primary);">What Is Tax Withholding and How Do You Adjust It?</a></li>
+      <li><a href="/blog/how-to-set-freelance-rates.html" style="color:var(--primary);">How to Set Your Freelance Rate Without Underselling Yourself</a></li>
+    </ul>
+    <p style="margin-top:16px;"><a href="/blog/" style="color:var(--primary);font-weight:600;">View all articles →</a></p>
+  </div>
+
+  <div class="content-card">
+    <h2>How We Make Money</h2>
+    <p>FreeMoneyIQ displays Google AdSense advertisements. These are standard display ads — not financial lead forms, not affiliate links to specific lenders. The ads shown are based on your browser's ad settings and are managed entirely by Google. We do not share your personal information to serve ads.</p>
+    <p>Some of our blog articles may contain affiliate links — when you click and purchase through those links, we may earn a small commission at no additional cost to you. We only recommend tools and resources we genuinely believe are useful. Affiliate income does not influence our calculator results or editorial content.</p>
+    <p>This model lets us offer all calculators and guides permanently free with no paywalls, no required accounts, and no subscription fees.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Important Disclaimer</h2>
+    <p>FreeMoneyIQ's calculators and articles provide estimates and general information only. They are educational tools, not financial advice. Actual mortgage rates, tax outcomes, investment returns, and financial results vary based on your individual circumstances, location, credit profile, and the specific financial institutions and products you use.</p>
+    <p>Before making any major financial decision — including taking on a mortgage, investing, or significant debt payoff strategy changes — consult with a qualified financial professional licensed in your state.</p>
+  </div>
+
+</div>
+<footer>
+  <p>© 2026 FreeMoneyIQ · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms of Use</a></p>
 </footer>
 </body>
 </html>
