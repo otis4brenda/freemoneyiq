@@ -49,7 +49,7 @@
     footer a:hover{color:white;}
     @media(max-width:600px){.nav-links{display:none;}}
   .amazon-rec{background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:20px 24px;margin:32px 0;}.amazon-rec-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#1a6cf6;margin-bottom:12px;}.amazon-rec-item{display:flex;gap:16px;align-items:flex-start;}.amazon-rec-info{flex:1;}.amazon-rec-title{font-weight:700;font-size:1rem;color:#1a1a2e;margin-bottom:4px;}.amazon-rec-desc{font-size:0.88rem;color:#6b7280;margin-bottom:10px;}.amazon-rec-btn{display:inline-block;background:#1a6cf6;color:white;font-size:0.85rem;font-weight:600;padding:8px 16px;border-radius:6px;text-decoration:none;}.amazon-rec-btn:hover{background:#1452c8;}
-  </style>
+  .amazon-rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px;}.amazon-rec-item{background:rgba(255,255,255,0.5);border-radius:8px;padding:14px;}.amazon-rec-author{font-size:0.82rem;color:#6b7280;margin-bottom:6px;font-style:italic;}</style>
 </head>
 <body>
 <nav>
@@ -150,11 +150,30 @@
 </div>
 <div class="amazon-rec">
   <div class="amazon-rec-label">📚 Recommended Reading</div>
-  <div class="amazon-rec-item">
-    <div class="amazon-rec-info">
-      <div class="amazon-rec-title">The Business Side of Creativity</div>
-      <div class="amazon-rec-desc">Cameron Foote's essential guide to pricing your work, contracts, and building a sustainable freelance business.</div>
-      <a class="amazon-rec-btn" href="https://www.amazon.com/dp/0393734005/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+  <div class="amazon-rec-grid">
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">The Business Side of Creativity</div>
+        <div class="amazon-rec-author">Cameron Foote</div>
+        <div class="amazon-rec-desc">The essential guide to pricing your work, contracts, and building a sustainable freelance business.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/0393734471/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+    </div>
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">Oversubscribed</div>
+        <div class="amazon-rec-author">Daniel Priestley</div>
+        <div class="amazon-rec-desc">How to position yourself so clients compete to hire you — and pay your real rates.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/0857087746/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+    </div>
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">The $100 Startup</div>
+        <div class="amazon-rec-author">Chris Guillebeau</div>
+        <div class="amazon-rec-desc">Real stories of freelancers and entrepreneurs who set their own rates and built profitable businesses.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/0307951529/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
     </div>
   </div>
 </div>

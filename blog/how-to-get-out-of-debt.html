@@ -56,7 +56,7 @@
     footer a:hover{color:white;}
     @media(max-width:600px){.nav-links{display:none;}.compare-grid{grid-template-columns:1fr;}}
   .amazon-rec{background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:20px 24px;margin:32px 0;}.amazon-rec-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#1a6cf6;margin-bottom:12px;}.amazon-rec-item{display:flex;gap:16px;align-items:flex-start;}.amazon-rec-info{flex:1;}.amazon-rec-title{font-weight:700;font-size:1rem;color:#1a1a2e;margin-bottom:4px;}.amazon-rec-desc{font-size:0.88rem;color:#6b7280;margin-bottom:10px;}.amazon-rec-btn{display:inline-block;background:#1a6cf6;color:white;font-size:0.85rem;font-weight:600;padding:8px 16px;border-radius:6px;text-decoration:none;}.amazon-rec-btn:hover{background:#1452c8;}
-  </style>
+  .amazon-rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px;}.amazon-rec-item{background:rgba(255,255,255,0.5);border-radius:8px;padding:14px;}.amazon-rec-author{font-size:0.82rem;color:#6b7280;margin-bottom:6px;font-style:italic;}</style>
 </head>
 <body>
 <nav>
@@ -187,11 +187,30 @@
 </div>
 <div class="amazon-rec">
   <div class="amazon-rec-label">📚 Recommended Reading</div>
-  <div class="amazon-rec-item">
-    <div class="amazon-rec-info">
-      <div class="amazon-rec-title">Debt-Free Forever</div>
-      <div class="amazon-rec-desc">Gail Vaz-Oxlade's step-by-step guide to getting out of debt and staying that way.</div>
-      <a class="amazon-rec-btn" href="https://www.amazon.com/dp/B004J4X6UI/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+  <div class="amazon-rec-grid">
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">The Total Money Makeover</div>
+        <div class="amazon-rec-author">Dave Ramsey</div>
+        <div class="amazon-rec-desc">Dave Ramsey's proven debt snowball plan — the #1 bestselling debt elimination book for over a decade.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/159555078X/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+    </div>
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">You Need a Budget</div>
+        <div class="amazon-rec-author">Jesse Mecham</div>
+        <div class="amazon-rec-desc">The YNAB method for breaking the paycheck-to-paycheck cycle and eliminating debt for good.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/0062567586/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+    </div>
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">Debt-Free Forever</div>
+        <div class="amazon-rec-author">Gail Vaz-Oxlade</div>
+        <div class="amazon-rec-desc">Gail Vaz-Oxlade's step-by-step system for getting out of debt and staying that way.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/1615190082/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
     </div>
   </div>
 </div>
