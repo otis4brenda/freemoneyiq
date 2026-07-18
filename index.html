@@ -240,7 +240,7 @@
     .calc-section { display: none; }
     .calc-section.active { display: block; }
     .calc-panel {
-      background: #EFF6FF;
+      background: #f0fdf9;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 32px;
@@ -308,8 +308,8 @@
 
     .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #2563EB; margin-bottom: 16px; }
-    .result-main { font-size: 48px; font-weight: 800; color: #2563EB; margin-bottom: 4px; line-height: 1.1; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #00c9a7; margin-bottom: 16px; }
+    .result-main { font-size: 48px; font-weight: 800; color: #00c9a7; margin-bottom: 4px; line-height: 1.1; }
     .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
@@ -370,46 +370,46 @@
   <div class="container">
     <!-- AdSense: Top of home -->
 
-    <div class="section-title"><i data-lucide="calculator" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#2563EB"></i>Choose a Calculator</div>
+    <div class="section-title"><i data-lucide="calculator" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#00c9a7"></i>Choose a Calculator</div>
     <div class="tool-grid">
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#2563EB"></i></div>
+        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#00c9a7"></i></div>
         <h2>Mortgage Payment Calculator</h2>
         <p>Find out exactly what your monthly mortgage payment will be — including principal, interest, and a full amortization breakdown.</p>
         <a class="btn-primary" href="mortgage-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="credit-card" style="width:32px;height:32px;color:#2563EB"></i></div>
+        <div class="tool-icon"><i data-lucide="credit-card" style="width:32px;height:32px;color:#00c9a7"></i></div>
         <h2>Debt & Loan Payoff Calculator</h2>
         <p>See how long it will take to pay off your debt and how much interest you'll save with extra payments. Works for credit card debt, car loans, and personal loans.</p>
         <a class="btn-primary" href="loan-payoff-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="piggy-bank" style="width:32px;height:32px;color:#2563EB"></i></div>
+        <div class="tool-icon"><i data-lucide="piggy-bank" style="width:32px;height:32px;color:#00c9a7"></i></div>
         <h2>Savings Goal Calculator</h2>
         <p>How much do you need to save each month to reach your goal? Enter your target and timeline to find out instantly.</p>
         <a class="btn-primary" href="savings-goal-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="briefcase" style="width:32px;height:32px;color:#2563EB"></i></div>
+        <div class="tool-icon"><i data-lucide="briefcase" style="width:32px;height:32px;color:#00c9a7"></i></div>
         <h2>Freelancer Rate Calculator</h2>
         <p>Calculate the hourly rate you need to charge to hit your income goal — accounting for taxes, expenses, and unpaid time.</p>
         <button class="btn-primary" onclick="showCalc('freelance')">Calculate Now →</button>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="trending-up" style="width:32px;height:32px;color:#2563EB"></i></div>
+        <div class="tool-icon"><i data-lucide="trending-up" style="width:32px;height:32px;color:#00c9a7"></i></div>
         <h2>Compound Interest Calculator</h2>
         <p>Watch your money grow. See exactly how compound interest builds wealth over time with any starting amount and rate.</p>
         <button class="btn-primary" onclick="showCalc('compound')">Calculate Now →</button>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="receipt" style="width:32px;height:32px;color:#2563EB"></i></div>
+        <div class="tool-icon"><i data-lucide="receipt" style="width:32px;height:32px;color:#00c9a7"></i></div>
         <h2>Tax Withholding Estimator</h2>
         <p>Estimate how much federal income tax will be withheld from your paycheck so there are no surprises at tax time.</p>
         <button class="btn-primary" onclick="showCalc('tax')">Calculate Now →</button>
@@ -418,11 +418,11 @@
     </div>
 
     <!-- State Mortgage Calculators Section -->
-    <div class="section-title"><i data-lucide="map" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#2563EB"></i>State Mortgage Calculators</div>
+    <div class="section-title"><i data-lucide="map" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#00c9a7"></i>State Mortgage Calculators</div>
     <p style="color:var(--muted);font-size:0.92rem;margin-bottom:16px;margin-top:-10px;">Bankrate and NerdWallet use national averages. We built state-specific calculators pre-loaded with local property tax rates, real first-time buyer programs, and current mortgage rates for the most active housing markets.</p>
     <div class="tool-grid">
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#2563EB"></i></div>
+        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#00c9a7"></i></div>
         <h2>Texas Mortgage Calculator</h2>
         <p>Pre-loaded with TX property tax rate (1.74%), average home price $310K, and My First Texas Home + MCC programs.</p>
         <a class="btn-primary" href="mortgage-calculator-texas.html">Calculate for Texas →</a>
@@ -469,7 +469,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="home" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Mortgage Payment Calculator</h2>
+      <h2><i data-lucide="home" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Mortgage Payment Calculator</h2>
       <p class="subtitle">Calculate your estimated monthly mortgage payment in seconds.</p>
       <div class="form-group">
         <label>Home Price ($)</label>
@@ -531,7 +531,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="credit-card" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Loan Payoff Calculator</h2>
+      <h2><i data-lucide="credit-card" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Loan Payoff Calculator</h2>
       <p class="subtitle">Find out how long it takes to pay off your loan and total interest paid.</p>
       <div class="form-group">
         <label>Loan Balance ($)</label>
@@ -578,7 +578,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="piggy-bank" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Savings Goal Calculator</h2>
+      <h2><i data-lucide="piggy-bank" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Savings Goal Calculator</h2>
       <p class="subtitle">How much do you need to save each month to reach your goal?</p>
       <div class="form-group">
         <label>Savings Goal ($)</label>
@@ -629,7 +629,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="briefcase" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Freelancer Hourly Rate Calculator</h2>
+      <h2><i data-lucide="briefcase" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Freelancer Hourly Rate Calculator</h2>
       <p class="subtitle">Find the minimum hourly rate you need to charge to hit your income goals.</p>
       <div class="form-group">
         <label>Desired Annual Income ($)</label>
@@ -686,7 +686,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Compound Interest Calculator</h2>
+      <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Compound Interest Calculator</h2>
       <p class="subtitle">See how your money grows with compound interest over time.</p>
       <div class="form-group">
         <label>Starting Amount ($)</label>
@@ -747,7 +747,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="receipt" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Tax Withholding Estimator</h2>
+      <h2><i data-lucide="receipt" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Tax Withholding Estimator</h2>
       <p class="subtitle">Estimate your federal income tax withholding per paycheck.</p>
       <div class="form-group">
         <label>Annual Gross Salary ($)</label>
@@ -965,7 +965,7 @@
     document.getElementById('m-totalint').textContent = fmt(totalInt);
     document.getElementById('mortgage-result').classList.add('show');
     const mCtx=document.getElementById('idx-mortgage-chart').getContext('2d');
-    const mD={labels:['P&I','Property Tax'],datasets:[{data:[Math.round(pi),Math.round(taxMo)],backgroundColor:['#2563EB','#F59E0B'],borderWidth:0}]};
+    const mD={labels:['P&I','Property Tax'],datasets:[{data:[Math.round(pi),Math.round(taxMo)],backgroundColor:['#1a6cf6','#F59E0B'],borderWidth:0}]};
     if(idxMortgageChart){idxMortgageChart.data=mD;idxMortgageChart.update();}
     else{idxMortgageChart=new Chart(mCtx,{type:'doughnut',data:mD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -992,7 +992,7 @@
     document.getElementById('l-pct').textContent = ((totalInterest/origBalance)*100).toFixed(1)+'%';
     document.getElementById('loan-result').classList.add('show');
     const lCtx=document.getElementById('idx-loan-chart').getContext('2d');
-    const lD={labels:['Principal','Interest Paid'],datasets:[{data:[Math.round(origBalance),Math.round(totalInterest)],backgroundColor:['#2563EB','#EF4444'],borderWidth:0}]};
+    const lD={labels:['Principal','Interest Paid'],datasets:[{data:[Math.round(origBalance),Math.round(totalInterest)],backgroundColor:['#1a6cf6','#EF4444'],borderWidth:0}]};
     if(idxLoanChart){idxLoanChart.data=lD;idxLoanChart.update();}
     else{idxLoanChart=new Chart(lCtx,{type:'doughnut',data:lD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -1020,7 +1020,7 @@
     document.getElementById('s-date').textContent = targetDate.toLocaleDateString('en-US',{month:'short',year:'numeric'});
     document.getElementById('savings-result').classList.add('show');
     const sCtx=document.getElementById('idx-savings-chart').getContext('2d');
-    const sD={labels:['Current Savings','Contributions','Interest'],datasets:[{data:[Math.round(current),Math.round(monthly*months),Math.round(Math.max(0,interestEarned))],backgroundColor:['#2563EB','#10B981','#F59E0B'],borderWidth:0}]};
+    const sD={labels:['Current Savings','Contributions','Interest'],datasets:[{data:[Math.round(current),Math.round(monthly*months),Math.round(Math.max(0,interestEarned))],backgroundColor:['#1a6cf6','#10B981','#F59E0B'],borderWidth:0}]};
     if(idxSavingsChart){idxSavingsChart.data=sD;idxSavingsChart.update();}
     else{idxSavingsChart=new Chart(sCtx,{type:'doughnut',data:sD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -1043,7 +1043,7 @@
     document.getElementById('f-daily').textContent = fmt2(hourlyRate * 8);
     document.getElementById('freelance-result').classList.add('show');
     const fCtx=document.getElementById('idx-freelance-chart').getContext('2d');
-    const fD={labels:['Desired Income','Expenses','Tax'],datasets:[{data:[Math.round(income),Math.round(expenses),Math.round(taxAmount)],backgroundColor:['#2563EB','#10B981','#EF4444'],borderWidth:0}]};
+    const fD={labels:['Desired Income','Expenses','Tax'],datasets:[{data:[Math.round(income),Math.round(expenses),Math.round(taxAmount)],backgroundColor:['#1a6cf6','#10B981','#EF4444'],borderWidth:0}]};
     if(idxFreelanceChart){idxFreelanceChart.data=fD;idxFreelanceChart.update();}
     else{idxFreelanceChart=new Chart(fCtx,{type:'doughnut',data:fD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -1071,7 +1071,7 @@
     document.getElementById('ci-roi').textContent = roi + '%';
     document.getElementById('compound-result').classList.add('show');
     const cCtx=document.getElementById('idx-compound-chart').getContext('2d');
-    const cD={labels:['Principal','Interest Earned'],datasets:[{data:[Math.round(contributed),Math.round(Math.max(0,earned))],backgroundColor:['#2563EB','#10B981'],borderWidth:0}]};
+    const cD={labels:['Principal','Interest Earned'],datasets:[{data:[Math.round(contributed),Math.round(Math.max(0,earned))],backgroundColor:['#1a6cf6','#10B981'],borderWidth:0}]};
     if(idxCompoundChart){idxCompoundChart.data=cD;idxCompoundChart.update();}
     else{idxCompoundChart=new Chart(cCtx,{type:'doughnut',data:cD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
