@@ -42,6 +42,11 @@
     .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px;}
     .calc-link{display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--text);font-size:0.88rem;font-weight:600;transition:border-color 0.2s,background 0.2s;}
     .calc-link:hover{border-color:var(--primary);background:#e8f5ee;}
+    .team-member{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
+    .team-member:last-child{border-bottom:none;}
+    .team-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#0d4a28);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+    .team-info h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+    .team-info p{font-size:0.88rem;color:var(--muted);margin:0;line-height:1.5;}
     footer{background:var(--text);color:#9ca3af;text-align:center;padding:28px 24px;font-size:0.85rem;margin-top:48px;}
     footer a{color:#9ca3af;text-decoration:none;}
     footer a:hover{color:white;}
@@ -66,6 +71,7 @@
 <div class="container">
 
   <div class="content-card">
+    <p style="font-size:0.82rem;color:var(--muted);margin-bottom:16px;">Written by the <strong><a href="/about.html" style="color:var(--primary);">FreeMoneyIQ Editorial Team</a></strong> &nbsp;·&nbsp; Last updated: <strong>July 2026</strong></p>
     <h2>Why We Built This</h2>
     <p>Personal finance decisions — buying a home, paying off debt, planning savings goals, setting a freelance rate — are some of the most important financial choices people make. Yet the tools available to help with those decisions are often paywalled, buried in lead-generation funnels, or designed to push you toward a product rather than inform your decision.</p>
     <p>FreeMoneyIQ was built to be different. We created a set of straightforward, accurate calculators and plain-language guides that give you real answers based on your real situation — with no email required, no account, no sales pitch, and no data sold to financial services companies. You use the tool, get your answer, and walk away informed.</p>
@@ -120,6 +126,32 @@
   </div>
 
   <div class="content-card">
+    <h2>Our Editorial Team</h2>
+    <p>FreeMoneyIQ is produced by a team of writers, researchers, and financial educators committed to making personal finance math accessible to everyone.</p>
+    <div class="team-member">
+      <div class="team-avatar">📊</div>
+      <div class="team-info">
+        <h3>FreeMoneyIQ Editorial Team</h3>
+        <p>Our team of financial writers and researchers specializes in consumer personal finance — mortgages, debt management, savings planning, and tax estimation. Each calculator is built to standard financial formulas and verified against IRS publications, Federal Reserve data, and established lending benchmarks before publication. Content is reviewed quarterly and updated whenever material rate or regulatory changes occur.</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-avatar">✍️</div>
+      <div class="team-info">
+        <h3>Research &amp; Methodology</h3>
+        <p>Our data sources include the IRS (tax brackets and withholding tables), the Federal Reserve and Freddie Mac (mortgage and interest rate benchmarks), the CFPB (loan calculation standards), and the Bureau of Labor Statistics (wage and employment data). All sources are cited in our <a href="/editorial-policy.html" style="color:var(--primary);">Editorial Policy</a>.</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-avatar">🔄</div>
+      <div class="team-info">
+        <h3>Update Commitment</h3>
+        <p>All calculators and guides are reviewed at minimum annually, with tax-related tools updated each January when new IRS tables are published. Rate benchmarks are refreshed quarterly. We publish a "Last updated" date on every page.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card">
     <h2>Important Disclaimer</h2>
     <p>FreeMoneyIQ's calculators and articles provide estimates and general information only. They are educational tools, not financial advice. Actual mortgage rates, tax outcomes, investment returns, and financial results vary based on your individual circumstances, location, credit profile, and the specific financial institutions and products you use.</p>
     <p>Before making any major financial decision — including taking on a mortgage, investing, or significant debt payoff strategy changes — consult with a qualified financial professional licensed in your state.</p>
@@ -127,7 +159,7 @@
 
 </div>
 <footer>
-  <p>© 2026 FreeMoneyIQ · <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms of Use</a></p>
+  <p>© 2026 FreeMoneyIQ &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog/">Blog</a> &nbsp;·&nbsp; <a href="/about.html">About</a> &nbsp;·&nbsp; <a href="/editorial-policy.html">Editorial Policy</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="/contact.html">Contact</a></p>
 </footer>
 </body>
 </html>
