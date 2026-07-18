@@ -134,21 +134,27 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
     .calc-btn:hover { background: var(--primary-dark); }
-    .result-box { background: linear-gradient(135deg, #f0f7ff, #e8fff8); border: 1px solid #c3dffe; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
-    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #2563EB; margin-bottom: 16px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #2563EB; margin-bottom: 4px; line-height: 1.1; }
+    .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
-    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
     .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
     .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .chart-wrap { display: flex; justify-content: center; margin: 16px 0 0; }
+    .chart-wrap canvas { max-width: 280px; max-height: 280px; }
     .growth-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 0.88rem; }
     .growth-table th { background: var(--primary); color: white; padding: 10px 12px; text-align: left; }
     .growth-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
     .growth-table tr:nth-child(even) td { background: #f9fafb; }
-    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 32px 20px; }
+    .content-section:nth-of-type(odd) { background: #FFFFFF; }
+    .content-section:nth-of-type(even) { background: #F8FAFC; }
     .content-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 12px; margin-top: 32px; }
     .content-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .calc-panel { background: #EFF6FF; }
     .faq-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
     .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
     .faq-item { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 12px; background: var(--card); }
@@ -166,6 +172,9 @@
     footer a:hover { color: white; }
     @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
+  <!-- Chart.js & Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <!-- WebApplication Schema (AEO) -->
   <script type="application/ld+json">
   {
@@ -222,14 +231,14 @@
 </nav>
 
 <div class="hero">
-  <h1>📈 Compound Interest Calculator — Watch Your Savings Grow</h1>
+  <h1><i data-lucide="trending-up" style="width:32px;height:32px;vertical-align:middle;margin-right:8px;"></i>Compound Interest Calculator — Watch Your Savings Grow</h1>
   <p>See how your money grows over time with the power of compound interest — including monthly contributions and a year-by-year breakdown.</p>
 </div>
 
 <div class="container">
 
   <div class="calc-panel">
-    <h2>📈 Compound Interest Calculator</h2>
+    <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Compound Interest Calculator</h2>
     <p class="subtitle">Enter your starting balance, monthly contributions, interest rate, and time horizon to see your future balance. · Updated July 2026</p>
 
     <div class="form-row">
@@ -266,13 +275,16 @@
     <button class="calc-btn" onclick="calcCompound()">Calculate Growth</button>
 
     <div id="ci-result" class="result-box">
-      <div class="result-main" id="ci-future"></div>
-      <div class="result-label">Future Balance</div>
-      <div class="result-breakdown">
-        <div class="result-item"><div class="label">Starting Balance</div><div class="value" id="ci-start-out"></div></div>
-        <div class="result-item"><div class="label">Total Contributions</div><div class="value" id="ci-contrib"></div></div>
-        <div class="result-item"><div class="label">Interest Earned</div><div class="value" id="ci-interest"></div></div>
-        <div class="result-item"><div class="label">Total Invested</div><div class="value" id="ci-invested"></div></div>
+      <div class="result-card">
+        <div class="result-label">Your Future Balance:</div>
+        <div class="result-main" id="ci-future"></div>
+        <div class="result-breakdown">
+          <div class="result-item"><div class="label">Starting Balance</div><div class="value" id="ci-start-out"></div></div>
+          <div class="result-item"><div class="label">Total Contributions</div><div class="value" id="ci-contrib"></div></div>
+          <div class="result-item"><div class="label">Interest Earned</div><div class="value" id="ci-interest"></div></div>
+          <div class="result-item"><div class="label">Total Invested</div><div class="value" id="ci-invested"></div></div>
+        </div>
+        <div class="chart-wrap"><canvas id="ci-chart"></canvas></div>
       </div>
       <table class="growth-table" id="ci-table">
         <thead><tr><th>Year</th><th>Balance</th><th>Contributions</th><th>Interest Earned</th></tr></thead>
@@ -329,11 +341,11 @@
 <div class="related-calcs">
   <h2>Other Free Calculators</h2>
   <div class="related-grid">
-    <a href="/mortgage-calculator.html" class="related-card"><div class="icon">🏠</div><div class="name">Mortgage Calculator</div></a>
-    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon">💳</div><div class="name">Loan Payoff Calculator</div></a>
-    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon">🐖</div><div class="name">Savings Goal Calculator</div></a>
-    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon">💼</div><div class="name">Freelancer Rate Calculator</div></a>
-    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon">🧾</div><div class="name">Tax Withholding Calculator</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Mortgage Calculator</div></a>
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon"><i data-lucide="piggy-bank" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon"><i data-lucide="briefcase" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Tax Withholding Calculator</div></a>
   </div>
 </div>
 
@@ -350,7 +362,10 @@
 </footer>
 
 <script>
+  lucide.createIcons();
   function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+
+  let ciChart = null;
 
   function calcCompound() {
     const principal = +document.getElementById('ci-principal').value || 0;
@@ -393,6 +408,17 @@
     document.getElementById('ci-interest').textContent = fmt(interestEarned);
     document.getElementById('ci-invested').textContent = fmt(totalInvested);
     document.getElementById('ci-result').classList.add('show');
+
+    // Chart
+    const ctx = document.getElementById('ci-chart').getContext('2d');
+    const chartData = {
+      labels: ['Principal', 'Interest Earned'],
+      datasets: [{ data: [Math.round(totalInvested), Math.round(Math.max(0, interestEarned))], backgroundColor: ['#2563EB', '#10B981'], borderWidth: 0 }]
+    };
+    if (ciChart) { ciChart.data = chartData; ciChart.update(); }
+    else {
+      ciChart = new Chart(ctx, { type: 'doughnut', data: chartData, options: { plugins: { legend: { position: 'bottom' } }, cutout: '60%' } });
+    }
   }
 </script>
 </body>

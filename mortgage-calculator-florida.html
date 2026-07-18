@@ -22,6 +22,10 @@
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
 
+  <!-- Chart.js & Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
   <!-- FAQPage Schema -->
   <script type="application/ld+json">
   {
@@ -115,14 +119,17 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
     .calc-btn:hover { background: var(--primary-dark); }
-    .result-box { background: linear-gradient(135deg, #f0f7ff, #e8fff8); border: 1px solid #c3dffe; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
-    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #2563EB; margin-bottom: 16px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #2563EB; margin-bottom: 4px; line-height: 1.1; }
+    .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
-    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
     .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
     .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .chart-wrap { display: flex; justify-content: center; margin: 16px 0 0; }
+    .chart-wrap canvas { max-width: 280px; max-height: 280px; }
     .content-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
     .content-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 12px; margin-top: 32px; }
     .content-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
@@ -153,6 +160,7 @@
     .related-card .icon { font-size: 1.5rem; margin-bottom: 6px; }
     .related-card .name { font-size: 0.85rem; font-weight: 600; }
     .author-note { font-size: 0.8rem; color: var(--muted); margin-top: 8px; font-style: italic; }
+    .calc-panel { background: #EFF6FF; }
     footer { background: var(--text); color: #9ca3af; text-align: center; padding: 32px 24px; font-size: 0.85rem; margin-top: 48px; }
     footer a { color: #9ca3af; text-decoration: none; }
     footer a:hover { color: white; }
@@ -214,13 +222,16 @@
     </div>
     <button class="calc-btn" onclick="calcMortgage()">Calculate My Florida Payment</button>
     <div id="mortgage-result" class="result-box">
-      <div class="result-main" id="m-monthly"></div>
-      <div class="result-label">Estimated Monthly Payment (Principal + Interest + Property Tax)</div>
-      <div class="result-breakdown">
-        <div class="result-item"><div class="label">Principal & Interest</div><div class="value" id="m-pi"></div></div>
-        <div class="result-item"><div class="label">Property Tax / Mo</div><div class="value" id="m-taxmo"></div></div>
-        <div class="result-item"><div class="label">Loan Amount</div><div class="value" id="m-loan"></div></div>
-        <div class="result-item"><div class="label">Total Interest Paid</div><div class="value" id="m-totalint"></div></div>
+      <div class="result-card">
+        <div class="result-label">Your Estimated Monthly Payment:</div>
+        <div class="result-main" id="m-monthly"></div>
+        <div class="result-breakdown">
+          <div class="result-item"><div class="label">Principal & Interest</div><div class="value" id="m-pi"></div></div>
+          <div class="result-item"><div class="label">Property Tax / Mo</div><div class="value" id="m-taxmo"></div></div>
+          <div class="result-item"><div class="label">Loan Amount</div><div class="value" id="m-loan"></div></div>
+          <div class="result-item"><div class="label">Total Interest Paid</div><div class="value" id="m-totalint"></div></div>
+        </div>
+        <div class="chart-wrap"><canvas id="state-mortgage-chart"></canvas></div>
       </div>
     </div>
     <p class="author-note">By the FreeMoneyIQ Editorial Team · Last updated: July 2026</p>
@@ -334,11 +345,11 @@
 <div class="related-calcs">
   <h2>Other Free Calculators</h2>
   <div class="related-grid">
-    <a href="/mortgage-calculator.html" class="related-card"><div class="icon">🏠</div><div class="name">National Mortgage Calculator</div></a>
-    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon">💳</div><div class="name">Loan Payoff Calculator</div></a>
-    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon">🐖</div><div class="name">Savings Goal Calculator</div></a>
-    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon">📈</div><div class="name">Compound Interest Calculator</div></a>
-    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon">🧾</div><div class="name">Tax Withholding Calculator</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">National Mortgage Calculator</div></a>
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon"><i data-lucide="piggy-bank" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon"><i data-lucide="trending-up" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Compound Interest Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Tax Withholding Calculator</div></a>
   </div>
 </div>
 
@@ -349,8 +360,10 @@
 </footer>
 
 <script>
+  lucide.createIcons();
   function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
   function fmt2(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  let stateChart = null;
   function calcMortgage() {
     const price = +document.getElementById('m-price').value;
     const down  = +document.getElementById('m-down').value;
@@ -368,6 +381,10 @@
     document.getElementById('m-loan').textContent = fmt(loan);
     document.getElementById('m-totalint').textContent = fmt(totalInt);
     document.getElementById('mortgage-result').classList.add('show');
+    const ctx = document.getElementById('state-mortgage-chart').getContext('2d');
+    const chartData = { labels: ['Principal & Interest', 'Property Tax'], datasets: [{ data: [Math.round(pi), Math.round(tax)], backgroundColor: ['#2563EB', '#F59E0B'], borderWidth: 0 }] };
+    if (stateChart) { stateChart.data = chartData; stateChart.update(); }
+    else { stateChart = new Chart(ctx, { type: 'doughnut', data: chartData, options: { plugins: { legend: { position: 'bottom' } }, cutout: '60%' } }); }
   }
 </script>
 </body>

@@ -134,20 +134,26 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
     .calc-btn:hover { background: var(--primary-dark); }
-    .result-box { background: linear-gradient(135deg, #f0f7ff, #e8fff8); border: 1px solid #c3dffe; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
-    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #2563EB; margin-bottom: 16px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #2563EB; margin-bottom: 4px; line-height: 1.1; }
+    .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
-    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
     .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
     .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .chart-wrap { display: flex; justify-content: center; margin: 16px 0 0; }
+    .chart-wrap canvas { max-width: 280px; max-height: 280px; }
     .savings-highlight { background: linear-gradient(135deg, #e8fff8, #d1fae5); border: 1px solid #6ee7b7; border-radius: var(--radius); padding: 16px 24px; margin-top: 16px; }
     .savings-highlight .sh-label { font-size: 0.85rem; color: #065f46; margin-bottom: 4px; font-weight: 600; }
     .savings-highlight .sh-value { font-size: 1.4rem; font-weight: 800; color: #047857; }
-    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
+    .content-section { max-width: 700px; margin: 0 auto 40px; padding: 32px 20px; }
+    .content-section:nth-of-type(odd) { background: #FFFFFF; }
+    .content-section:nth-of-type(even) { background: #F8FAFC; }
     .content-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 12px; margin-top: 32px; }
     .content-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+    .calc-panel { background: #EFF6FF; }
     .faq-section { max-width: 700px; margin: 0 auto 40px; padding: 0 20px; }
     .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
     .faq-item { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 12px; background: var(--card); }
@@ -165,6 +171,9 @@
     footer a:hover { color: white; }
     @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
+  <!-- Chart.js & Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <!-- WebApplication Schema (AEO) -->
   <script type="application/ld+json">
   {
@@ -221,14 +230,14 @@
 </nav>
 
 <div class="hero">
-  <h1>💳 Loan Payoff Calculator — Pay Off Debt Faster &amp; Save on Interest</h1>
+  <h1><i data-lucide="credit-card" style="width:32px;height:32px;vertical-align:middle;margin-right:8px;"></i>Loan Payoff Calculator — Pay Off Debt Faster &amp; Save on Interest</h1>
   <p>See exactly when you'll pay off your loan and how much you save by making extra payments. Instant results, no sign-up needed.</p>
 </div>
 
 <div class="container">
 
   <div class="calc-panel">
-    <h2>💳 Loan Payoff Calculator</h2>
+    <h2><i data-lucide="credit-card" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Loan Payoff Calculator</h2>
     <p class="subtitle">Enter your loan details to see your payoff date and how extra payments save you money. · Updated July 2026</p>
 
     <div class="form-group">
@@ -253,13 +262,16 @@
     <button class="calc-btn" onclick="calcLoan()">Calculate Payoff</button>
 
     <div id="loan-result" class="result-box">
-      <div class="result-main" id="l-months"></div>
-      <div class="result-label">Time to Pay Off (standard payment)</div>
-      <div class="result-breakdown">
-        <div class="result-item"><div class="label">Total Paid</div><div class="value" id="l-total"></div></div>
-        <div class="result-item"><div class="label">Total Interest</div><div class="value" id="l-interest"></div></div>
-        <div class="result-item"><div class="label">Payoff Date</div><div class="value" id="l-date"></div></div>
-        <div class="result-item"><div class="label">Interest % of Loan</div><div class="value" id="l-pct"></div></div>
+      <div class="result-card">
+        <div class="result-label">Time to Pay Off Your Loan:</div>
+        <div class="result-main" id="l-months"></div>
+        <div class="result-breakdown">
+          <div class="result-item"><div class="label">Total Paid</div><div class="value" id="l-total"></div></div>
+          <div class="result-item"><div class="label">Total Interest</div><div class="value" id="l-interest"></div></div>
+          <div class="result-item"><div class="label">Payoff Date</div><div class="value" id="l-date"></div></div>
+          <div class="result-item"><div class="label">Interest % of Loan</div><div class="value" id="l-pct"></div></div>
+        </div>
+        <div class="chart-wrap"><canvas id="loan-chart"></canvas></div>
       </div>
       <div id="l-extra-block" class="savings-highlight" style="display:none;">
         <div class="sh-label">💰 With extra payments — you pay off <span id="l-months-saved"></span> sooner and save:</div>
@@ -416,11 +428,11 @@
 <div class="related-calcs">
   <h2>Other Free Calculators</h2>
   <div class="related-grid">
-    <a href="/mortgage-calculator.html" class="related-card"><div class="icon">🏠</div><div class="name">Mortgage Calculator</div></a>
-    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon">🐖</div><div class="name">Savings Goal Calculator</div></a>
-    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon">💼</div><div class="name">Freelancer Rate Calculator</div></a>
-    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon">📈</div><div class="name">Compound Interest Calculator</div></a>
-    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon">🧾</div><div class="name">Tax Withholding Calculator</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Mortgage Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon"><i data-lucide="piggy-bank" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon"><i data-lucide="briefcase" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon"><i data-lucide="trending-up" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Compound Interest Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#2563EB"></i></div><div class="name">Tax Withholding Calculator</div></a>
   </div>
 </div>
 
@@ -437,8 +449,11 @@
 </footer>
 
 <script>
+  lucide.createIcons();
   function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
   function fmt2(n) { return '$' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+
+  let loanChart = null;
 
   function payoffMonths(balance, rate, payment) {
     if (payment <= balance * rate) return null;
@@ -495,6 +510,17 @@
     }
 
     document.getElementById('loan-result').classList.add('show');
+
+    // Chart
+    const ctx = document.getElementById('loan-chart').getContext('2d');
+    const chartData = {
+      labels: ['Total Principal', 'Total Interest Paid'],
+      datasets: [{ data: [Math.round(balance), Math.round(totalInterest)], backgroundColor: ['#2563EB', '#EF4444'], borderWidth: 0 }]
+    };
+    if (loanChart) { loanChart.data = chartData; loanChart.update(); }
+    else {
+      loanChart = new Chart(ctx, { type: 'doughnut', data: chartData, options: { plugins: { legend: { position: 'bottom' } }, cutout: '60%' } });
+    }
   }
 </script>
 </body>

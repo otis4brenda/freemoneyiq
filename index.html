@@ -25,6 +25,9 @@
     gtag('config', 'G-LDKB4113HX');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <!-- Chart.js & Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Schema Markup for SEO -->
   <script type="application/ld+json">
@@ -237,7 +240,7 @@
     .calc-section { display: none; }
     .calc-section.active { display: block; }
     .calc-panel {
-      background: var(--card);
+      background: #EFF6FF;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 32px;
@@ -303,36 +306,17 @@
     }
     .calc-btn:hover { background: var(--primary-dark); }
 
-    .result-box {
-      background: linear-gradient(135deg, #f0f7ff, #e8fff8);
-      border: 1px solid #c3dffe;
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-top: 24px;
-      display: none;
-    }
+    .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-main {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
-    .result-breakdown {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 16px;
-    }
-    .result-item {
-      background: white;
-      border-radius: 8px;
-      padding: 12px;
-      border: 1px solid var(--border);
-    }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #2563EB; margin-bottom: 16px; }
+    .result-main { font-size: 48px; font-weight: 800; color: #2563EB; margin-bottom: 4px; line-height: 1.1; }
+    .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
     .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
     .result-item .value { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .chart-wrap { display: flex; justify-content: center; margin: 16px 0 0; }
+    .chart-wrap canvas { max-width: 280px; max-height: 280px; }
 
     /* FOOTER */
     footer {
@@ -386,46 +370,46 @@
   <div class="container">
     <!-- AdSense: Top of home -->
 
-    <div class="section-title">Choose a Calculator</div>
+    <div class="section-title"><i data-lucide="calculator" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#2563EB"></i>Choose a Calculator</div>
     <div class="tool-grid">
 
       <div class="tool-card">
-        <div class="tool-icon">🏠</div>
+        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#2563EB"></i></div>
         <h2>Mortgage Payment Calculator</h2>
         <p>Find out exactly what your monthly mortgage payment will be — including principal, interest, and a full amortization breakdown.</p>
         <a class="btn-primary" href="mortgage-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon">💳</div>
+        <div class="tool-icon"><i data-lucide="credit-card" style="width:32px;height:32px;color:#2563EB"></i></div>
         <h2>Debt & Loan Payoff Calculator</h2>
         <p>See how long it will take to pay off your debt and how much interest you'll save with extra payments. Works for credit card debt, car loans, and personal loans.</p>
         <a class="btn-primary" href="loan-payoff-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon">🐖</div>
+        <div class="tool-icon"><i data-lucide="piggy-bank" style="width:32px;height:32px;color:#2563EB"></i></div>
         <h2>Savings Goal Calculator</h2>
         <p>How much do you need to save each month to reach your goal? Enter your target and timeline to find out instantly.</p>
         <a class="btn-primary" href="savings-goal-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon">💼</div>
+        <div class="tool-icon"><i data-lucide="briefcase" style="width:32px;height:32px;color:#2563EB"></i></div>
         <h2>Freelancer Rate Calculator</h2>
         <p>Calculate the hourly rate you need to charge to hit your income goal — accounting for taxes, expenses, and unpaid time.</p>
         <button class="btn-primary" onclick="showCalc('freelance')">Calculate Now →</button>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon">📈</div>
+        <div class="tool-icon"><i data-lucide="trending-up" style="width:32px;height:32px;color:#2563EB"></i></div>
         <h2>Compound Interest Calculator</h2>
         <p>Watch your money grow. See exactly how compound interest builds wealth over time with any starting amount and rate.</p>
         <button class="btn-primary" onclick="showCalc('compound')">Calculate Now →</button>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon">🧾</div>
+        <div class="tool-icon"><i data-lucide="receipt" style="width:32px;height:32px;color:#2563EB"></i></div>
         <h2>Tax Withholding Estimator</h2>
         <p>Estimate how much federal income tax will be withheld from your paycheck so there are no surprises at tax time.</p>
         <button class="btn-primary" onclick="showCalc('tax')">Calculate Now →</button>
@@ -434,29 +418,29 @@
     </div>
 
     <!-- State Mortgage Calculators Section -->
-    <div class="section-title">🗺️ State Mortgage Calculators</div>
+    <div class="section-title"><i data-lucide="map" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#2563EB"></i>State Mortgage Calculators</div>
     <p style="color:var(--muted);font-size:0.92rem;margin-bottom:16px;margin-top:-10px;">Bankrate and NerdWallet use national averages. We built state-specific calculators pre-loaded with local property tax rates, real first-time buyer programs, and current mortgage rates for the most active housing markets.</p>
     <div class="tool-grid">
       <div class="tool-card">
-        <div class="tool-icon">🤠</div>
+        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#2563EB"></i></div>
         <h2>Texas Mortgage Calculator</h2>
         <p>Pre-loaded with TX property tax rate (1.74%), average home price $310K, and My First Texas Home + MCC programs.</p>
         <a class="btn-primary" href="mortgage-calculator-texas.html">Calculate for Texas →</a>
       </div>
       <div class="tool-card">
-        <div class="tool-icon">🌴</div>
+        <div class="tool-icon"><i data-lucide="sun" style="width:32px;height:32px;color:#F59E0B"></i></div>
         <h2>California Mortgage Calculator</h2>
         <p>Pre-loaded with CA Prop 13 tax rate (0.75%), average home price $750K, and CalHFA + Dream For All programs.</p>
         <a class="btn-primary" href="mortgage-calculator-california.html">Calculate for California →</a>
       </div>
       <div class="tool-card">
-        <div class="tool-icon">☀️</div>
+        <div class="tool-icon"><i data-lucide="waves" style="width:32px;height:32px;color:#06B6D4"></i></div>
         <h2>Florida Mortgage Calculator</h2>
         <p>Pre-loaded with FL property tax rate (0.89%), average home price $415K, and Hometown Heroes program.</p>
         <a class="btn-primary" href="mortgage-calculator-florida.html">Calculate for Florida →</a>
       </div>
       <div class="tool-card">
-        <div class="tool-icon">🗽</div>
+        <div class="tool-icon"><i data-lucide="building-2" style="width:32px;height:32px;color:#8B5CF6"></i></div>
         <h2>New York Mortgage Calculator</h2>
         <p>Pre-loaded with NY property tax rate (1.54%), average home price $450K, and SONYMA + NYC HomeFirst programs.</p>
         <a class="btn-primary" href="mortgage-calculator-new-york.html">Calculate for New York →</a>
@@ -485,7 +469,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2>🏠 Mortgage Payment Calculator</h2>
+      <h2><i data-lucide="home" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Mortgage Payment Calculator</h2>
       <p class="subtitle">Calculate your estimated monthly mortgage payment in seconds.</p>
       <div class="form-group">
         <label>Home Price ($)</label>
@@ -518,13 +502,16 @@
       </div>
       <button class="calc-btn" onclick="calcMortgage()">Calculate My Payment</button>
       <div id="mortgage-result" class="result-box">
-        <div class="result-main" id="m-monthly"></div>
-        <div class="result-label">Estimated Monthly Payment</div>
-        <div class="result-breakdown">
-          <div class="result-item"><div class="label">Principal & Interest</div><div class="value" id="m-pi"></div></div>
-          <div class="result-item"><div class="label">Property Tax</div><div class="value" id="m-taxmo"></div></div>
-          <div class="result-item"><div class="label">Loan Amount</div><div class="value" id="m-loan"></div></div>
-          <div class="result-item"><div class="label">Total Interest Paid</div><div class="value" id="m-totalint"></div></div>
+        <div class="result-card">
+          <div class="result-label">Your Estimated Monthly Payment:</div>
+          <div class="result-main" id="m-monthly"></div>
+          <div class="result-breakdown">
+            <div class="result-item"><div class="label">Principal & Interest</div><div class="value" id="m-pi"></div></div>
+            <div class="result-item"><div class="label">Property Tax</div><div class="value" id="m-taxmo"></div></div>
+            <div class="result-item"><div class="label">Loan Amount</div><div class="value" id="m-loan"></div></div>
+            <div class="result-item"><div class="label">Total Interest Paid</div><div class="value" id="m-totalint"></div></div>
+          </div>
+          <div class="chart-wrap"><canvas id="idx-mortgage-chart"></canvas></div>
         </div>
       </div>
     </div>
@@ -544,7 +531,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2>💳 Loan Payoff Calculator</h2>
+      <h2><i data-lucide="credit-card" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Loan Payoff Calculator</h2>
       <p class="subtitle">Find out how long it takes to pay off your loan and total interest paid.</p>
       <div class="form-group">
         <label>Loan Balance ($)</label>
@@ -562,13 +549,16 @@
       </div>
       <button class="calc-btn" onclick="calcLoan()">Calculate Payoff</button>
       <div id="loan-result" class="result-box">
-        <div class="result-main" id="l-months"></div>
-        <div class="result-label">Time to Pay Off</div>
-        <div class="result-breakdown">
-          <div class="result-item"><div class="label">Total Paid</div><div class="value" id="l-total"></div></div>
-          <div class="result-item"><div class="label">Total Interest</div><div class="value" id="l-interest"></div></div>
-          <div class="result-item"><div class="label">Payoff Date</div><div class="value" id="l-date"></div></div>
-          <div class="result-item"><div class="label">Interest % of Loan</div><div class="value" id="l-pct"></div></div>
+        <div class="result-card">
+          <div class="result-label">Time to Pay Off Your Loan:</div>
+          <div class="result-main" id="l-months"></div>
+          <div class="result-breakdown">
+            <div class="result-item"><div class="label">Total Paid</div><div class="value" id="l-total"></div></div>
+            <div class="result-item"><div class="label">Total Interest</div><div class="value" id="l-interest"></div></div>
+            <div class="result-item"><div class="label">Payoff Date</div><div class="value" id="l-date"></div></div>
+            <div class="result-item"><div class="label">Interest % of Loan</div><div class="value" id="l-pct"></div></div>
+          </div>
+          <div class="chart-wrap"><canvas id="idx-loan-chart"></canvas></div>
         </div>
       </div>
     </div>
@@ -588,7 +578,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2>🐖 Savings Goal Calculator</h2>
+      <h2><i data-lucide="piggy-bank" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Savings Goal Calculator</h2>
       <p class="subtitle">How much do you need to save each month to reach your goal?</p>
       <div class="form-group">
         <label>Savings Goal ($)</label>
@@ -610,13 +600,16 @@
       </div>
       <button class="calc-btn" onclick="calcSavings()">Calculate Monthly Savings</button>
       <div id="savings-result" class="result-box">
-        <div class="result-main" id="s-monthly"></div>
-        <div class="result-label">Required Monthly Savings</div>
-        <div class="result-breakdown">
-          <div class="result-item"><div class="label">Total You'll Save</div><div class="value" id="s-total"></div></div>
-          <div class="result-item"><div class="label">Interest Earned</div><div class="value" id="s-interest"></div></div>
-          <div class="result-item"><div class="label">Goal Amount</div><div class="value" id="s-goalout"></div></div>
-          <div class="result-item"><div class="label">Target Date</div><div class="value" id="s-date"></div></div>
+        <div class="result-card">
+          <div class="result-label">Your Required Monthly Savings:</div>
+          <div class="result-main" id="s-monthly"></div>
+          <div class="result-breakdown">
+            <div class="result-item"><div class="label">Total You'll Save</div><div class="value" id="s-total"></div></div>
+            <div class="result-item"><div class="label">Interest Earned</div><div class="value" id="s-interest"></div></div>
+            <div class="result-item"><div class="label">Goal Amount</div><div class="value" id="s-goalout"></div></div>
+            <div class="result-item"><div class="label">Target Date</div><div class="value" id="s-date"></div></div>
+          </div>
+          <div class="chart-wrap"><canvas id="idx-savings-chart"></canvas></div>
         </div>
       </div>
     </div>
@@ -636,7 +629,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2>💼 Freelancer Hourly Rate Calculator</h2>
+      <h2><i data-lucide="briefcase" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Freelancer Hourly Rate Calculator</h2>
       <p class="subtitle">Find the minimum hourly rate you need to charge to hit your income goals.</p>
       <div class="form-group">
         <label>Desired Annual Income ($)</label>
@@ -664,13 +657,16 @@
       </div>
       <button class="calc-btn" onclick="calcFreelance()">Calculate My Rate</button>
       <div id="freelance-result" class="result-box">
-        <div class="result-main" id="f-rate"></div>
-        <div class="result-label">Minimum Hourly Rate to Charge</div>
-        <div class="result-breakdown">
-          <div class="result-item"><div class="label">Annual Revenue Needed</div><div class="value" id="f-revenue"></div></div>
-          <div class="result-item"><div class="label">Total Billable Hours</div><div class="value" id="f-totalhours"></div></div>
-          <div class="result-item"><div class="label">Tax Allowance</div><div class="value" id="f-taxamt"></div></div>
-          <div class="result-item"><div class="label">Daily Rate (8 hrs)</div><div class="value" id="f-daily"></div></div>
+        <div class="result-card">
+          <div class="result-label">Your Minimum Hourly Rate:</div>
+          <div class="result-main" id="f-rate"></div>
+          <div class="result-breakdown">
+            <div class="result-item"><div class="label">Annual Revenue Needed</div><div class="value" id="f-revenue"></div></div>
+            <div class="result-item"><div class="label">Total Billable Hours</div><div class="value" id="f-totalhours"></div></div>
+            <div class="result-item"><div class="label">Tax Allowance</div><div class="value" id="f-taxamt"></div></div>
+            <div class="result-item"><div class="label">Daily Rate (8 hrs)</div><div class="value" id="f-daily"></div></div>
+          </div>
+          <div class="chart-wrap"><canvas id="idx-freelance-chart"></canvas></div>
         </div>
       </div>
     </div>
@@ -690,7 +686,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2>📈 Compound Interest Calculator</h2>
+      <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Compound Interest Calculator</h2>
       <p class="subtitle">See how your money grows with compound interest over time.</p>
       <div class="form-group">
         <label>Starting Amount ($)</label>
@@ -722,13 +718,16 @@
       </div>
       <button class="calc-btn" onclick="calcCompound()">Calculate Growth</button>
       <div id="compound-result" class="result-box">
-        <div class="result-main" id="ci-total"></div>
-        <div class="result-label">Final Balance</div>
-        <div class="result-breakdown">
-          <div class="result-item"><div class="label">Total Contributed</div><div class="value" id="ci-contributed"></div></div>
-          <div class="result-item"><div class="label">Interest Earned</div><div class="value" id="ci-earned"></div></div>
-          <div class="result-item"><div class="label">Starting Amount</div><div class="value" id="ci-start"></div></div>
-          <div class="result-item"><div class="label">Return on Investment</div><div class="value" id="ci-roi"></div></div>
+        <div class="result-card">
+          <div class="result-label">Your Future Balance:</div>
+          <div class="result-main" id="ci-total"></div>
+          <div class="result-breakdown">
+            <div class="result-item"><div class="label">Total Contributed</div><div class="value" id="ci-contributed"></div></div>
+            <div class="result-item"><div class="label">Interest Earned</div><div class="value" id="ci-earned"></div></div>
+            <div class="result-item"><div class="label">Starting Amount</div><div class="value" id="ci-start"></div></div>
+            <div class="result-item"><div class="label">Return on Investment</div><div class="value" id="ci-roi"></div></div>
+          </div>
+          <div class="chart-wrap"><canvas id="idx-compound-chart"></canvas></div>
         </div>
       </div>
     </div>
@@ -748,7 +747,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2>🧾 Tax Withholding Estimator</h2>
+      <h2><i data-lucide="receipt" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#2563EB"></i>Tax Withholding Estimator</h2>
       <p class="subtitle">Estimate your federal income tax withholding per paycheck.</p>
       <div class="form-group">
         <label>Annual Gross Salary ($)</label>
@@ -775,13 +774,16 @@
       </div>
       <button class="calc-btn" onclick="calcTax()">Estimate Withholding</button>
       <div id="tax-result" class="result-box">
-        <div class="result-main" id="t-percheck"></div>
-        <div class="result-label">Estimated Federal Tax Per Paycheck</div>
-        <div class="result-breakdown">
-          <div class="result-item"><div class="label">Annual Federal Tax</div><div class="value" id="t-annual"></div></div>
-          <div class="result-item"><div class="label">Effective Tax Rate</div><div class="value" id="t-effective"></div></div>
-          <div class="result-item"><div class="label">Take-Home Per Check</div><div class="value" id="t-takehome"></div></div>
-          <div class="result-item"><div class="label">Annual Take-Home</div><div class="value" id="t-annualtakehome"></div></div>
+        <div class="result-card">
+          <div class="result-label">Estimated Federal Tax Per Paycheck:</div>
+          <div class="result-main" id="t-percheck"></div>
+          <div class="result-breakdown">
+            <div class="result-item"><div class="label">Annual Federal Tax</div><div class="value" id="t-annual"></div></div>
+            <div class="result-item"><div class="label">Effective Tax Rate</div><div class="value" id="t-effective"></div></div>
+            <div class="result-item"><div class="label">Take-Home Per Check</div><div class="value" id="t-takehome"></div></div>
+            <div class="result-item"><div class="label">Annual Take-Home</div><div class="value" id="t-annualtakehome"></div></div>
+          </div>
+          <div class="chart-wrap"><canvas id="idx-tax-chart"></canvas></div>
         </div>
       </div>
     </div>
@@ -797,7 +799,7 @@
 </div>
 
 <!-- EDITORIAL CONTENT SECTION -->
-<div style="background:#ffffff;padding:48px 24px;border-top:1px solid #e5e7eb;">
+<div style="background:#F8FAFC;padding:48px 24px;border-top:1px solid #e5e7eb;">
   <div style="max-width:800px;margin:0 auto;">
 
     <!-- About FreeMoneyIQ -->
@@ -915,6 +917,9 @@
 </footer>
 
 <script>
+  lucide.createIcons();
+  let idxMortgageChart=null, idxLoanChart=null, idxSavingsChart=null, idxFreelanceChart=null, idxCompoundChart=null, idxTaxChart=null;
+
   // ── Navigation ──────────────────────────────────────────────
   const sections = ['home','mortgage','loan','savings','freelance','compound','tax'];
 
@@ -959,6 +964,10 @@
     document.getElementById('m-loan').textContent = fmt(loan);
     document.getElementById('m-totalint').textContent = fmt(totalInt);
     document.getElementById('mortgage-result').classList.add('show');
+    const mCtx=document.getElementById('idx-mortgage-chart').getContext('2d');
+    const mD={labels:['P&I','Property Tax'],datasets:[{data:[Math.round(pi),Math.round(taxMo)],backgroundColor:['#2563EB','#F59E0B'],borderWidth:0}]};
+    if(idxMortgageChart){idxMortgageChart.data=mD;idxMortgageChart.update();}
+    else{idxMortgageChart=new Chart(mCtx,{type:'doughnut',data:mD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
 
   // ── Loan Payoff ───────────────────────────────────────────────
@@ -982,6 +991,10 @@
     document.getElementById('l-date').textContent = payoffDate.toLocaleDateString('en-US',{month:'short',year:'numeric'});
     document.getElementById('l-pct').textContent = ((totalInterest/origBalance)*100).toFixed(1)+'%';
     document.getElementById('loan-result').classList.add('show');
+    const lCtx=document.getElementById('idx-loan-chart').getContext('2d');
+    const lD={labels:['Principal','Interest Paid'],datasets:[{data:[Math.round(origBalance),Math.round(totalInterest)],backgroundColor:['#2563EB','#EF4444'],borderWidth:0}]};
+    if(idxLoanChart){idxLoanChart.data=lD;idxLoanChart.update();}
+    else{idxLoanChart=new Chart(lCtx,{type:'doughnut',data:lD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
 
   // ── Savings Goal ──────────────────────────────────────────────
@@ -1006,6 +1019,10 @@
     document.getElementById('s-goalout').textContent = fmt(goal);
     document.getElementById('s-date').textContent = targetDate.toLocaleDateString('en-US',{month:'short',year:'numeric'});
     document.getElementById('savings-result').classList.add('show');
+    const sCtx=document.getElementById('idx-savings-chart').getContext('2d');
+    const sD={labels:['Current Savings','Contributions','Interest'],datasets:[{data:[Math.round(current),Math.round(monthly*months),Math.round(Math.max(0,interestEarned))],backgroundColor:['#2563EB','#10B981','#F59E0B'],borderWidth:0}]};
+    if(idxSavingsChart){idxSavingsChart.data=sD;idxSavingsChart.update();}
+    else{idxSavingsChart=new Chart(sCtx,{type:'doughnut',data:sD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
 
   // ── Freelancer Rate ───────────────────────────────────────────
@@ -1025,6 +1042,10 @@
     document.getElementById('f-taxamt').textContent = fmt(taxAmount);
     document.getElementById('f-daily').textContent = fmt2(hourlyRate * 8);
     document.getElementById('freelance-result').classList.add('show');
+    const fCtx=document.getElementById('idx-freelance-chart').getContext('2d');
+    const fD={labels:['Desired Income','Expenses','Tax'],datasets:[{data:[Math.round(income),Math.round(expenses),Math.round(taxAmount)],backgroundColor:['#2563EB','#10B981','#EF4444'],borderWidth:0}]};
+    if(idxFreelanceChart){idxFreelanceChart.data=fD;idxFreelanceChart.update();}
+    else{idxFreelanceChart=new Chart(fCtx,{type:'doughnut',data:fD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
 
   // ── Compound Interest ─────────────────────────────────────────
@@ -1049,6 +1070,10 @@
     document.getElementById('ci-start').textContent = fmt(principal);
     document.getElementById('ci-roi').textContent = roi + '%';
     document.getElementById('compound-result').classList.add('show');
+    const cCtx=document.getElementById('idx-compound-chart').getContext('2d');
+    const cD={labels:['Principal','Interest Earned'],datasets:[{data:[Math.round(contributed),Math.round(Math.max(0,earned))],backgroundColor:['#2563EB','#10B981'],borderWidth:0}]};
+    if(idxCompoundChart){idxCompoundChart.data=cD;idxCompoundChart.update();}
+    else{idxCompoundChart=new Chart(cCtx,{type:'doughnut',data:cD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
 
   // ── Tax Withholding ───────────────────────────────────────────
@@ -1079,6 +1104,12 @@
     document.getElementById('t-takehome').textContent = fmt2(payPerCheck);
     document.getElementById('t-annualtakehome').textContent = fmt(salary - tax);
     document.getElementById('tax-result').classList.add('show');
+    const ficaEst=Math.round(Math.min(salary,176100)*0.062+salary*0.0145);
+    const takeHome=Math.round(Math.max(0,salary-tax-ficaEst));
+    const tCtx=document.getElementById('idx-tax-chart').getContext('2d');
+    const tD={labels:['Federal Tax','FICA','Take-Home'],datasets:[{data:[Math.round(tax),ficaEst,takeHome],backgroundColor:['#EF4444','#F59E0B','#10B981'],borderWidth:0}]};
+    if(idxTaxChart){idxTaxChart.data=tD;idxTaxChart.update();}
+    else{idxTaxChart=new Chart(tCtx,{type:'doughnut',data:tD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
 
   // Init
