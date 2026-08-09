@@ -417,6 +417,19 @@
   </ul>
 </div>
 
+<!-- National Average Scenario Box -->
+<div id="national-average-scenario" style="background:#f0fdf4;border:1px solid #86efac;border-left:4px solid #16a34a;border-radius:8px;padding:18px 22px;max-width:700px;margin:0 auto 28px;">
+  <strong style="color:#15803d;font-size:0.95rem;">📊 National Average Scenario — August 2026</strong>
+  <p style="margin:10px 0 6px;font-size:0.9rem;color:#166534;">An average American who invests <strong>$500/month</strong> starting at age 30 at a historical average return of <strong>7% annually</strong> (S&amp;P 500 inflation-adjusted average):</p>
+  <ul style="margin:0;padding-left:20px;font-size:0.9rem;color:#166534;line-height:1.8;">
+    <li>By age 60: <strong>$567,000</strong> — on only $180,000 contributed</li>
+    <li>By age 65: <strong>$826,000</strong></li>
+    <li>The <strong>FIRE number</strong> for a $50,000/year retirement: ~$1,250,000 (25× rule, 4% withdrawal)</li>
+    <li>Starting 10 years later (age 40) reduces the age-65 total by <strong>over $400,000</strong></li>
+  </ul>
+  <p style="margin:10px 0 0;font-size:0.82rem;color:#4d7c5e;">Sources: S&amp;P 500 historical data (Federal Reserve), SEC Compound Interest guidance, 4% rule (Bengen 1994 / Trinity Study).</p>
+</div>
+
 <!-- E-E-A-T Attribution -->
 <div style="background:#f0f7ff;border-top:1px solid #e5e7eb;padding:20px 24px;text-align:center;font-size:0.83rem;color:#6b7280;">
   <p>Written by the <strong><a href="/about.html" style="color:#1a6cf6;text-decoration:none;">FreeMoneyIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
@@ -488,5 +501,33 @@
     }
   }
 </script>
+
+<script>
+  // Embed mode
+  (function() {
+    if (new URLSearchParams(window.location.search).get('embed') === '1') {
+      document.documentElement.classList.add('embed-mode');
+      const style = document.createElement('style');
+      style.textContent = '.embed-mode nav, .embed-mode footer, .embed-mode .related-calcs, .embed-mode .faq-section, .embed-mode .content-section, .embed-mode .adsbygoogle { display:none !important; } .embed-mode body { background:#fff; padding:0; margin:0; } .embed-mode .embed-attribution { display:block !important; }';
+      document.head.appendChild(style);
+    }
+  })();
+</script>
+
+<div class="embed-attribution" style="display:none;text-align:center;padding:8px;font-size:12px;color:#666;border-top:1px solid #e5e7eb;">
+  Free calculator by <a href="https://freemoneyiq.com/compound-interest-calculator.html" style="color:#1a6cf6;">FreeMoneyIQ</a> — no login required
+</div>
+
+<!-- Embed Snippet:
+<iframe
+  src="https://freemoneyiq.com/compound-interest-calculator.html?embed=1"
+  width="100%" height="580" frameborder="0"
+  title="Free Compound Interest Calculator"
+  loading="lazy">
+</iframe>
+<p style="font-size:13px;color:#666;">
+  Free calculator by <a href="https://freemoneyiq.com/compound-interest-calculator.html" rel="nofollow">FreeMoneyIQ</a>
+</p>
+-->
 </body>
 </html>
