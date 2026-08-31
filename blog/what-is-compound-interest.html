@@ -53,6 +53,13 @@
     footer a{color:#9ca3af;text-decoration:none;}
     footer a:hover{color:white;}
     @media(max-width:600px){.nav-links{display:none;}}
+  .faq-item{border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin:12px 0;background:var(--card);}
+  .faq-q{font-weight:700;color:var(--primary);margin-bottom:8px;}
+  .faq-a{color:#374151;margin:0;}
+  .data-table{width:100%;border-collapse:collapse;margin:20px 0 24px;font-size:0.9rem;}
+  .data-table th{background:var(--primary);color:white;padding:10px 14px;text-align:left;}
+  .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);}
+  .data-table tr:nth-child(even) td{background:#f0f9f4;}
   .amazon-rec{background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:20px 24px;margin:32px 0;}.amazon-rec-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#1a6cf6;margin-bottom:12px;}.amazon-rec-item{display:flex;gap:16px;align-items:flex-start;}.amazon-rec-info{flex:1;}.amazon-rec-title{font-weight:700;font-size:1rem;color:#1a1a2e;margin-bottom:4px;}.amazon-rec-desc{font-size:0.88rem;color:#6b7280;margin-bottom:10px;}.amazon-rec-btn{display:inline-block;background:#1a6cf6;color:white;font-size:0.85rem;font-weight:600;padding:8px 16px;border-radius:6px;text-decoration:none;}.amazon-rec-btn:hover{background:#1452c8;}
   .amazon-rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px;}.amazon-rec-item{background:rgba(255,255,255,0.5);border-radius:8px;padding:14px;}.amazon-rec-author{font-size:0.82rem;color:#6b7280;margin-bottom:6px;font-style:italic;}</style>
   <script type="application/ld+json">
@@ -221,6 +228,68 @@
 
   <p>Compound interest is simultaneously your greatest financial ally and your most dangerous financial enemy. In savings and investments, it silently multiplies your wealth year after year — rewarding patience and penalizing delay. In debt, especially high-interest credit card debt, it silently multiplies what you owe.</p>
   <p>The takeaway is simple: eliminate high-interest debt as fast as possible (it's compounding against you), and start investing as early as possible (so compounding works for you). Even small amounts, invested consistently over long periods, can produce life-changing results.</p>
+
+  <h2>Compound Interest with Regular Contributions — The Real Power</h2>
+  <p>The examples above assume a one-time lump-sum investment. Most people build wealth through regular contributions — adding money consistently over time. This is where compound interest becomes truly life-changing. Here's what $500/month invested at 7% annual return looks like over time:</p>
+  <table class="data-table">
+    <tr><th>Years Investing</th><th>Total Contributed</th><th>Final Balance</th><th>Compound Growth</th></tr>
+    <tr><td>10 years</td><td>$60,000</td><td>$86,869</td><td>$26,869</td></tr>
+    <tr><td>20 years</td><td>$120,000</td><td>$260,926</td><td>$140,926</td></tr>
+    <tr><td>30 years</td><td>$180,000</td><td>$606,438</td><td>$426,438</td></tr>
+    <tr><td>40 years</td><td>$240,000</td><td>$1,312,026</td><td>$1,072,026</td></tr>
+  </table>
+  <p>At 40 years, your $240,000 in contributions has grown to over $1.3 million. More than 80% of that final balance — $1,072,026 — is pure compound growth, not money you put in. This is why financial advisors are almost fanatical about starting early: the longer the runway, the more spectacular the compounding effect.</p>
+
+  <h2>The Cost of Waiting — A Sobering Comparison</h2>
+  <p>Procrastination has a precise dollar cost when it comes to compound interest. Let's look at what starting just 5 years later costs you (same $500/month at 7%):</p>
+  <ul>
+    <li><strong>Start at age 25, retire at 65 (40 years):</strong> Final balance = $1,312,026</li>
+    <li><strong>Start at age 30, retire at 65 (35 years):</strong> Final balance = $907,320</li>
+    <li><strong>Start at age 35, retire at 65 (30 years):</strong> Final balance = $606,438</li>
+    <li><strong>Start at age 40, retire at 65 (25 years):</strong> Final balance = $390,000</li>
+  </ul>
+  <p>Waiting from age 25 to age 35 costs you $705,588 in final wealth — even though the contribution difference is only $60,000. That's the compounding gap: time is the most valuable resource in investing, and it can't be bought back.</p>
+
+  <h2>Frequently Asked Questions About Compound Interest</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: What is compound interest in simple terms?</div>
+    <p class="faq-a">Compound interest is interest on interest. When you earn interest on a savings account or investment, that interest gets added to your balance. Next period, you earn interest on the larger balance — which includes the previous interest. Over time, this snowball effect causes your money to grow exponentially rather than in a straight line. The same process works in reverse for debt: you owe interest on your interest, which is why carrying a balance on high-APR credit cards is so financially damaging.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: How often does compound interest compound?</div>
+    <p class="faq-a">It depends on the account or loan. High-yield savings accounts and credit cards typically compound daily. Most bonds compound semi-annually. CDs and some savings accounts compound monthly or quarterly. More frequent compounding means faster growth (for savings) or faster accumulation (for debt). When comparing savings accounts, look for the APY (Annual Percentage Yield) rather than the stated interest rate — APY accounts for compounding frequency and gives you a true apples-to-apples comparison.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: What is the formula for compound interest?</div>
+    <p class="faq-a">The standard formula is: A = P(1 + r/n)^(nt), where A = final amount, P = principal (starting amount), r = annual interest rate (as a decimal), n = number of times interest compounds per year, and t = time in years. For example, $10,000 at 5% annual rate compounded monthly for 10 years: A = $10,000 × (1 + 0.05/12)^(12×10) = $10,000 × (1.004167)^120 = $16,470. You don't need to do this math manually — our compound interest calculator handles it automatically.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: Is compound interest good or bad?</div>
+    <p class="faq-a">Both — it entirely depends on which side of the equation you're on. When you're saving or investing, compound interest is your greatest financial ally, multiplying your wealth exponentially over time. When you carry high-interest debt (especially credit cards at 20%+ APR), compound interest is your worst financial enemy, growing your balance faster than you can pay it down. The strategic response: aggressively eliminate high-interest debt first (stopping compound interest working against you), then invest consistently (putting compound interest to work for you).</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: What's the best account to take advantage of compound interest?</div>
+    <p class="faq-a">In 2026, the best options are: (1) High-yield savings accounts at 4.5–5.1% APY for liquid emergency fund money — FDIC insured and risk-free; (2) Roth IRA invested in low-cost index funds for long-term retirement savings — contributions grow tax-free and withdrawals in retirement are tax-free; (3) 401(k) especially if your employer offers a match — the match is an immediate 50–100% return before a dollar of compounding even starts; (4) Taxable brokerage accounts after maxing tax-advantaged accounts. Avoid traditional savings accounts at 0.01–0.5% APY — inflation outpaces them, meaning you're actually losing purchasing power.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: How long does it take to double your money with compound interest?</div>
+    <p class="faq-a">Use the Rule of 72: divide 72 by your annual interest rate. At 6%: 72 ÷ 6 = 12 years to double. At 8%: 9 years. At 10%: 7.2 years. For debt, the same rule applies in reverse: a credit card balance at 24% APR doubles in just 3 years if you're not paying it down. The Rule of 72 is a quick mental math shortcut — for precise figures, use our compound interest calculator.</p>
+  </div>
+
+  <div class="cta-box">
+    <h3>See Compound Interest in Action</h3>
+    <p>Enter your starting amount, monthly contribution, and expected rate to see exactly how your money grows over time.</p>
+    <a class="cta-btn" href="/compound-interest-calculator.html">Try the Free Compound Interest Calculator →</a>
+  </div>
+
+  <h2>The Bottom Line</h2>
+  <p>Compound interest is the most powerful force in personal finance — but only if you understand it and put it to work intentionally. Start saving and investing as early as possible, even in small amounts. Eliminate high-interest debt before it compounds against you. Choose accounts with competitive rates (high-yield savings, low-cost index funds) over traditional accounts that barely beat zero. And use time as your most powerful advantage — because unlike income or market returns, time is the one variable you can't get back once it's gone.</p>
 
 </div>
 <div class="amazon-rec">

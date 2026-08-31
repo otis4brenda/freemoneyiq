@@ -50,6 +50,15 @@
     footer a{color:#9ca3af;text-decoration:none;}
     footer a:hover{color:white;}
     @media(max-width:600px){.nav-links{display:none;}}
+  .faq-item{border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin:12px 0;background:var(--card);}
+  .faq-q{font-weight:700;color:var(--primary);margin-bottom:8px;}
+  .faq-a{color:#374151;margin:0;}
+  .data-table{width:100%;border-collapse:collapse;margin:20px 0 24px;font-size:0.9rem;}
+  .data-table th{background:var(--primary);color:white;padding:10px 14px;text-align:left;}
+  .data-table td{padding:10px 14px;border-bottom:1px solid var(--border);}
+  .data-table tr:nth-child(even) td{background:#f0f9f4;}
+  .tip-box{background:#fffbeb;border-left:4px solid var(--accent);padding:18px 20px;border-radius:8px;margin:24px 0;}
+  .tip-box p{margin:0;}
   .amazon-rec{background:#f0f7ff;border:1px solid #bfdbfe;border-radius:12px;padding:20px 24px;margin:32px 0;}.amazon-rec-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#1a6cf6;margin-bottom:12px;}.amazon-rec-item{display:flex;gap:16px;align-items:flex-start;}.amazon-rec-info{flex:1;}.amazon-rec-title{font-weight:700;font-size:1rem;color:#1a1a2e;margin-bottom:4px;}.amazon-rec-desc{font-size:0.88rem;color:#6b7280;margin-bottom:10px;}.amazon-rec-btn{display:inline-block;background:#1a6cf6;color:white;font-size:0.85rem;font-weight:600;padding:8px 16px;border-radius:6px;text-decoration:none;}.amazon-rec-btn:hover{background:#1452c8;}
   .amazon-rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px;}.amazon-rec-item{background:rgba(255,255,255,0.5);border-radius:8px;padding:14px;}.amazon-rec-author{font-size:0.82rem;color:#6b7280;margin-bottom:6px;font-style:italic;}</style>
   <script type="application/ld+json">
@@ -208,8 +217,60 @@
     </ul>
   </div>
 
+  <h2>State Tax Withholding: Don't Forget the Second Layer</h2>
+  <p>Everything above applies to federal income tax withholding. Most states with income taxes have their own withholding system as well — a separate state equivalent of the W-4. Here's a quick overview:</p>
+  <table class="data-table">
+    <tr><th>State Tax Situation</th><th>What It Means for You</th></tr>
+    <tr><td>No state income tax (TX, FL, WA, NV, WY, SD, AK, NH, TN)</td><td>No state withholding — only federal applies</td></tr>
+    <tr><td>Flat rate states (e.g., IL at 4.95%, MA at 5%)</td><td>Simple withholding, same percentage for everyone</td></tr>
+    <tr><td>Graduated rate states (e.g., CA up to 13.3%, NY up to 10.9%)</td><td>State withholding form required; rates vary by income</td></tr>
+    <tr><td>Local income taxes (NYC, some OH/PA municipalities)</td><td>Additional local withholding on top of state and federal</td></tr>
+  </table>
+  <p>If you live in a high-tax state like California or New York, state withholding can be a significant chunk of your paycheck — sometimes exceeding your federal withholding. When moving states, update your state withholding form with your new employer immediately; continuing to withhold at the old state's rate is a common error that creates headaches at tax time.</p>
+
+  <h2>Withholding and the Gig Economy</h2>
+  <p>More Americans than ever are earning income outside of traditional employment — through platforms like Uber, DoorDash, Etsy, Upwork, or Airbnb. This income has no withholding at all. You're responsible for tracking it and paying taxes yourself. Here's the basic framework:</p>
+  <ul>
+    <li><strong>Quarterly estimated taxes:</strong> Self-employment income triggers quarterly estimated tax payments due April 15, June 15, September 15, and January 15. The safe harbor: pay either 90% of your current year's estimated tax or 100% of last year's total tax bill (110% if your income exceeds $150,000). Miss these and you may owe an underpayment penalty at tax time even if you pay your annual bill in full.</li>
+    <li><strong>Self-employment tax:</strong> On top of income tax, self-employed individuals owe 15.3% self-employment tax on net earnings up to $176,100 in 2026 (covers both employee and employer Social Security/Medicare contributions). You can deduct half of this as an above-the-line deduction.</li>
+    <li><strong>The W-4 workaround:</strong> If you have a day job with withholding plus side income, you can use Step 4(c) on your W-4 to withhold additional dollars each paycheck to cover the tax on your side income. This avoids managing quarterly payments separately.</li>
+    <li><strong>Form 1099-K:</strong> In 2026, platforms that pay you $5,000 or more are required to file a 1099-K with the IRS and send you a copy. This means the IRS already knows about this income — it must be reported on your tax return.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions About Tax Withholding</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: How does tax withholding work?</div>
+    <p class="faq-a">Tax withholding is a pay-as-you-go system where your employer deducts a portion of your paycheck and sends it directly to the IRS throughout the year as prepayment of your annual income tax bill. The amount withheld is determined by your W-4 form — specifically your filing status, whether you have multiple jobs, your dependents, and any additional adjustments you request. At tax time, you reconcile: if too much was withheld, you get a refund; if too little, you owe the difference.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: What should I claim on my W-4 to get the most money in each paycheck?</div>
+    <p class="faq-a">The 2020 W-4 redesign removed the old allowances system, so you no longer "claim" a number. To minimize withholding (get more per paycheck), make sure your filing status is accurate and claim all eligible dependents in Step 3. If you have significant deductions beyond the standard deduction, list them in Step 4(b). Be cautious — under-withholding means you'll owe at tax time, and if you owe more than $1,000, the IRS may charge an underpayment penalty. Use the IRS Withholding Estimator at irs.gov/W4app for a precise calculation.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: Why did I get a big tax refund and is that bad?</div>
+    <p class="faq-a">A large refund means you overpaid the IRS throughout the year — essentially giving the government an interest-free loan of your own money. The IRS doesn't pay you interest on that overpayment. In 2026 with high-yield savings accounts paying 4.5–5%, a $3,600 refund represents about $180 in lost interest you could have earned. That said, if you tend to spend money rather than save it, a forced "savings" mechanism through overwithholding isn't necessarily wrong — it just has a real cost. Ideally, aim for a small refund ($200–$500) or a small amount owed, not a massive refund.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: How do I update my W-4?</div>
+    <p class="faq-a">Ask your HR department or payroll provider for a blank W-4 form, complete it with your updated information, and submit it. There's no limit on how often you can update it — you can submit a new W-4 any time your situation changes. Most employers implement the change in the next one or two pay periods. You can also download the current W-4 from irs.gov. Changes take effect going forward; you cannot retroactively adjust withholding for pay periods that have already occurred.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: What happens if I don't have enough taxes withheld?</div>
+    <p class="faq-a">If you owe more than $1,000 at tax time AND didn't meet the safe harbor (90% of current year's tax or 100% of last year's tax), the IRS charges an underpayment penalty — calculated as the federal short-term interest rate plus 3%. In 2026, this is approximately 7% annually on the underpaid amount. You also simply owe the taxes due, which must be paid by April 15 to avoid late payment interest (0.5% per month). Chronic under-withholding is a red flag — update your W-4 or set up quarterly estimated payments.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Q: Does tax withholding cover Social Security and Medicare too?</div>
+    <p class="faq-a">Social Security and Medicare (FICA taxes) are separate from income tax withholding but also taken from your paycheck. They're fixed-rate — Social Security is 6.2% on wages up to $176,100 in 2026, and Medicare is 1.45% on all wages (plus an additional 0.9% on wages above $200,000 for single filers). Your W-4 affects only federal income tax withholding, not FICA. These taxes are mandatory and cannot be adjusted via W-4 — they're withheld automatically at the fixed rates regardless of your filing status or personal situation.</p>
+  </div>
+
   <h2>The Bottom Line</h2>
-  <p>Tax withholding is the system that ensures you pay your income taxes gradually throughout the year rather than all at once in April. Getting it right means neither a surprise bill nor an oversized refund — just smooth, accurate prepayment of what you actually owe. Review your W-4 any time your life situation changes, and aim for a refund close to zero so your money works for you all year long.</p>
+  <p>Tax withholding is the system that ensures you pay your income taxes gradually throughout the year rather than all at once in April. Getting it right means neither a surprise bill nor an oversized refund — just smooth, accurate prepayment of what you actually owe. Review your W-4 any time your life situation changes, use the IRS Withholding Estimator to dial it in, and aim for a refund close to zero so your money works for you all year long. If you have side income, act now to set up quarterly estimated payments — don't wait until April to discover you owe thousands unexpectedly.</p>
 </div>
 <div class="amazon-rec">
   <div class="amazon-rec-label">📚 Recommended Reading</div>
