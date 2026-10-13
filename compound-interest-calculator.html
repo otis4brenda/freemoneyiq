@@ -107,9 +107,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary: #1a6cf6; --primary-dark: #1452c8; --accent: #00c9a7;
-      --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
-      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,108,246,0.08);
+      --primary: #1a6b3c; --primary-dark: #0d4a28; --accent: #f59e0b;
+      --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280;
+      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,107,60,0.08);
     }
     body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
     nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
@@ -118,7 +118,7 @@
     .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
     .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-    .hero { background: linear-gradient(135deg, #1a6cf6 0%, #00c9a7 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+    .hero { background: linear-gradient(135deg, #1a6b3c 0%, #f59e0b 100%); color: white; text-align: center; padding: 48px 24px 40px; }
     .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
     .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -136,8 +136,8 @@
     .calc-btn:hover { background: var(--primary-dark); }
     .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #00c9a7; margin-bottom: 16px; }
-    .result-main { font-size: 52px; font-weight: 800; color: #00c9a7; margin-bottom: 4px; line-height: 1.1; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #f59e0b; margin-bottom: 16px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #f59e0b; margin-bottom: 4px; line-height: 1.1; }
     .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
@@ -238,7 +238,7 @@
 <div class="container">
 
   <div class="calc-panel">
-    <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Compound Interest Calculator</h2>
+    <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Compound Interest Calculator</h2>
     <p class="subtitle">Enter your starting balance, monthly contributions, interest rate, and time horizon to see your future balance. · Updated October 2026</p>
 
     <div class="form-row">
@@ -299,7 +299,7 @@
 
 <!-- Content -->
 <div class="content-section">
-  <p class="quick-answer" style="background:#f0f7ff; border-left:4px solid #1a6cf6; padding:12px 16px; border-radius:6px; font-size:0.95rem; margin-bottom:20px;">Compound interest is the engine behind every long-term investment strategy. At the S&amp;P 500's historical average of roughly 10% annually (or ~7% inflation-adjusted), $10,000 invested today grows to over $198,000 in 30 years — without adding a single dollar more. The earlier you start, the more dramatically the math works in your favor.</p>
+  <p class="quick-answer" style="background:#f0f7ff; border-left:4px solid #1a6b3c; padding:12px 16px; border-radius:6px; font-size:0.95rem; margin-bottom:20px;">Compound interest is the engine behind every long-term investment strategy. At the S&amp;P 500's historical average of roughly 10% annually (or ~7% inflation-adjusted), $10,000 invested today grows to over $198,000 in 30 years — without adding a single dollar more. The earlier you start, the more dramatically the math works in your favor.</p>
 
   <h2>Why Compound Interest Is the Most Powerful Force in Personal Finance</h2>
   <p>Albert Einstein reportedly called compound interest "the eighth wonder of the world." The math backs it up: in June 2026, competitive online banks like Varo Money (5.00% APY), Axos Bank (4.21%), and Newtek Bank (4.20%) are paying more than 10x the national average of 0.38% held by traditional brick-and-mortar institutions. Every dollar parked in a high-yield account earns interest daily, and that earned interest immediately starts earning more — a genuine snowball effect that accelerates every single year.</p>
@@ -399,11 +399,11 @@
 <div class="related-calcs">
   <h2>Other Free Calculators</h2>
   <div class="related-grid">
-    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Mortgage Calculator</div></a>
-    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Loan Payoff Calculator</div></a>
-    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon"><i data-lucide="piggy-bank" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Savings Goal Calculator</div></a>
-    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon"><i data-lucide="briefcase" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Freelancer Rate Calculator</div></a>
-    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Tax Withholding Calculator</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Mortgage Calculator</div></a>
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon"><i data-lucide="piggy-bank" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon"><i data-lucide="briefcase" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Tax Withholding Calculator</div></a>
   </div>
 </div>
 
@@ -412,8 +412,8 @@
 <div style="background:white;border-radius:12px;border:1px solid var(--border);padding:24px 28px;margin:28px auto;max-width:700px;box-shadow:var(--shadow);">
   <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin:0 0 14px;">📚 Related Guides</h3>
   <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-    <li><a href="/blog/what-is-compound-interest.html" style="color:#1a6cf6;font-weight:600;text-decoration:none;">→ What Is Compound Interest?</a><span style="color:#6b7280;font-size:0.88rem;"> — how it works, where to find it in 2026, and the growth table</span></li>
-    <li><a href="/blog/how-to-set-a-savings-goal.html" style="color:#1a6cf6;font-weight:600;text-decoration:none;">→ How to Set a Savings Goal</a><span style="color:#6b7280;font-size:0.88rem;"> — turn compound growth projections into an actionable savings plan</span></li>
+    <li><a href="/blog/what-is-compound-interest.html" style="color:#1a6b3c;font-weight:600;text-decoration:none;">→ What Is Compound Interest?</a><span style="color:#6b7280;font-size:0.88rem;"> — how it works, where to find it in 2026, and the growth table</span></li>
+    <li><a href="/blog/how-to-set-a-savings-goal.html" style="color:#1a6b3c;font-weight:600;text-decoration:none;">→ How to Set a Savings Goal</a><span style="color:#6b7280;font-size:0.88rem;"> — turn compound growth projections into an actionable savings plan</span></li>
   </ul>
 </div>
 
@@ -432,7 +432,7 @@
 
 <!-- E-E-A-T Attribution -->
 <div style="background:#f0f7ff;border-top:1px solid #e5e7eb;padding:20px 24px;text-align:center;font-size:0.83rem;color:#6b7280;">
-  <p>Written by the <strong><a href="/about.html" style="color:#1a6cf6;text-decoration:none;">FreeMoneyIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
+  <p>Written by the <strong><a href="/about.html" style="color:#1a6b3c;text-decoration:none;">FreeMoneyIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
   <p style="margin-top:6px;max-width:700px;margin-left:auto;margin-right:auto;">Compound interest calculations follow the standard compound growth formula per SEC Investor Education guidelines. Historical return benchmarks sourced from Federal Reserve and S&P data.</p>
 </div>
 
@@ -493,7 +493,7 @@
     const ctx = document.getElementById('ci-chart').getContext('2d');
     const chartData = {
       labels: ['Principal', 'Interest Earned'],
-      datasets: [{ data: [Math.round(totalInvested), Math.round(Math.max(0, interestEarned))], backgroundColor: ['#1a6cf6', '#10B981'], borderWidth: 0 }]
+      datasets: [{ data: [Math.round(totalInvested), Math.round(Math.max(0, interestEarned))], backgroundColor: ['#1a6b3c', '#10B981'], borderWidth: 0 }]
     };
     if (ciChart) { ciChart.data = chartData; ciChart.update(); }
     else {
@@ -515,7 +515,7 @@
 </script>
 
 <div class="embed-attribution" style="display:none;text-align:center;padding:8px;font-size:12px;color:#666;border-top:1px solid #e5e7eb;">
-  Free calculator by <a href="https://freemoneyiq.com/compound-interest-calculator.html" style="color:#1a6cf6;">FreeMoneyIQ</a> — no login required
+  Free calculator by <a href="https://freemoneyiq.com/compound-interest-calculator.html" style="color:#1a6b3c;">FreeMoneyIQ</a> — no login required
 </div>
 
 <!-- Embed Snippet:

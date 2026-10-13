@@ -107,9 +107,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary: #1a6cf6; --primary-dark: #1452c8; --accent: #00c9a7;
-      --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
-      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,108,246,0.08);
+      --primary: #1a6b3c; --primary-dark: #0d4a28; --accent: #f59e0b;
+      --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280;
+      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,107,60,0.08);
     }
     body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
     nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
@@ -118,7 +118,7 @@
     .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
     .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-    .hero { background: linear-gradient(135deg, #1a6cf6 0%, #00c9a7 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+    .hero { background: linear-gradient(135deg, #1a6b3c 0%, #f59e0b 100%); color: white; text-align: center; padding: 48px 24px 40px; }
     .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
     .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -136,8 +136,8 @@
     .calc-btn:hover { background: var(--primary-dark); }
     .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #00c9a7; margin-bottom: 16px; }
-    .result-main { font-size: 52px; font-weight: 800; color: #00c9a7; margin-bottom: 4px; line-height: 1.1; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #f59e0b; margin-bottom: 16px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #f59e0b; margin-bottom: 4px; line-height: 1.1; }
     .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
@@ -234,7 +234,7 @@
 <div class="container">
 
   <div class="calc-panel">
-    <h2><i data-lucide="piggy-bank" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Savings Goal Calculator</h2>
+    <h2><i data-lucide="piggy-bank" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Savings Goal Calculator</h2>
     <p class="subtitle">Enter your goal, timeline, and interest rate to find your required monthly savings amount. · Updated October 2026</p>
 
     <div class="form-group">
@@ -279,7 +279,7 @@
 
 <!-- Content -->
 <div class="content-section">
-  <p class="quick-answer" style="background:#f0f7ff; border-left:4px solid #1a6cf6; padding:12px 16px; border-radius:6px; font-size:0.95rem; margin-bottom:20px;">To find your required monthly savings, enter your goal amount, timeline, and the interest rate your account pays — the calculator does the rest. In 2026, top high-yield savings accounts (HYSAs) pay 4.0–4.5% APY, so a $20,000 emergency fund at 4.5% APY over 48 months costs about $390/month instead of $417 — the interest covers the gap. For FIRE planning, your target is typically 25× your annual expenses, with a 7% real return from index fund investing.</p>
+  <p class="quick-answer" style="background:#f0f7ff; border-left:4px solid #1a6b3c; padding:12px 16px; border-radius:6px; font-size:0.95rem; margin-bottom:20px;">To find your required monthly savings, enter your goal amount, timeline, and the interest rate your account pays — the calculator does the rest. In 2026, top high-yield savings accounts (HYSAs) pay 4.0–4.5% APY, so a $20,000 emergency fund at 4.5% APY over 48 months costs about $390/month instead of $417 — the interest covers the gap. For FIRE planning, your target is typically 25× your annual expenses, with a 7% real return from index fund investing.</p>
 
   <h2>How to Set a Savings Goal That You'll Actually Hit</h2>
   <p>The biggest predictor of whether you reach a savings goal isn't your income — it's how specific your target is. "Save more" is a wish. "Save $18,000 for a home down payment by April 2028" is a plan. This calculator takes the guesswork out by converting any goal and timeline into a single monthly number. Once you know that number, set up an automatic transfer on payday and treat it like a bill you can't skip. Behavioral finance research consistently shows that automation beats willpower every time.</p>
@@ -321,11 +321,11 @@
 <div class="related-calcs">
   <h2>Other Free Calculators</h2>
   <div class="related-grid">
-    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Mortgage Calculator</div></a>
-    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Loan Payoff Calculator</div></a>
-    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon"><i data-lucide="briefcase" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Freelancer Rate Calculator</div></a>
-    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon"><i data-lucide="trending-up" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Compound Interest Calculator</div></a>
-    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Tax Withholding Calculator</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Mortgage Calculator</div></a>
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/freelancer-rate-calculator.html" class="related-card"><div class="icon"><i data-lucide="briefcase" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Freelancer Rate Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon"><i data-lucide="trending-up" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Compound Interest Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Tax Withholding Calculator</div></a>
   </div>
 </div>
 
@@ -334,14 +334,14 @@
 <div style="background:white;border-radius:12px;border:1px solid var(--border);padding:24px 28px;margin:28px auto;max-width:700px;box-shadow:var(--shadow);">
   <h3 style="font-size:1.05rem;font-weight:700;color:var(--text);margin:0 0 14px;">📚 Related Guides</h3>
   <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-    <li><a href="/blog/how-to-set-a-savings-goal.html" style="color:#1a6cf6;font-weight:600;text-decoration:none;">→ How to Set a Savings Goal</a><span style="color:#6b7280;font-size:0.88rem;"> — SMART goals, target amounts, and where to keep your savings</span></li>
-    <li><a href="/blog/how-to-build-an-emergency-fund.html" style="color:#1a6cf6;font-weight:600;text-decoration:none;">→ How to Build an Emergency Fund</a><span style="color:#6b7280;font-size:0.88rem;"> — the 3–6 month rule and how to get there faster</span></li>
+    <li><a href="/blog/how-to-set-a-savings-goal.html" style="color:#1a6b3c;font-weight:600;text-decoration:none;">→ How to Set a Savings Goal</a><span style="color:#6b7280;font-size:0.88rem;"> — SMART goals, target amounts, and where to keep your savings</span></li>
+    <li><a href="/blog/how-to-build-an-emergency-fund.html" style="color:#1a6b3c;font-weight:600;text-decoration:none;">→ How to Build an Emergency Fund</a><span style="color:#6b7280;font-size:0.88rem;"> — the 3–6 month rule and how to get there faster</span></li>
   </ul>
 </div>
 
 <!-- E-E-A-T Attribution -->
 <div style="background:#f0f7ff;border-top:1px solid #e5e7eb;padding:20px 24px;text-align:center;font-size:0.83rem;color:#6b7280;">
-  <p>Written by the <strong><a href="/about.html" style="color:#1a6cf6;text-decoration:none;">FreeMoneyIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
+  <p>Written by the <strong><a href="/about.html" style="color:#1a6b3c;text-decoration:none;">FreeMoneyIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
   <p style="margin-top:6px;max-width:700px;margin-left:auto;margin-right:auto;">Savings calculations use the present-value-of-annuity formula. Interest rate benchmarks reference FDIC national deposit rate data and Fed Funds rate guidance.</p>
 </div>
 
@@ -405,7 +405,7 @@
     const ctx = document.getElementById('savings-chart').getContext('2d');
     const chartData = {
       labels: ['Starting Amount', 'Monthly Contributions', 'Interest Earned'],
-      datasets: [{ data: [Math.round(startingAmt), Math.round(monthlyContribsTotal), Math.round(interestAmt)], backgroundColor: ['#1a6cf6', '#10B981', '#F59E0B'], borderWidth: 0 }]
+      datasets: [{ data: [Math.round(startingAmt), Math.round(monthlyContribsTotal), Math.round(interestAmt)], backgroundColor: ['#1a6b3c', '#10B981', '#F59E0B'], borderWidth: 0 }]
     };
     if (savingsChart) { savingsChart.data = chartData; savingsChart.update(); }
     else {

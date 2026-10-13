@@ -97,16 +97,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary: #1a6cf6;
-      --primary-dark: #1452c8;
-      --accent: #00c9a7;
-      --bg: #f4f7fb;
+      --primary: #1a6b3c;
+      --primary-dark: #0d4a28;
+      --accent: #f59e0b;
+      --bg: #f3f9f7;
       --card: #ffffff;
-      --text: #1a1a2e;
+      --text: #1a2e25;
       --muted: #6b7280;
       --border: #e5e7eb;
       --radius: 12px;
-      --shadow: 0 2px 16px rgba(26,108,246,0.08);
+      --shadow: 0 2px 16px rgba(26,107,60,0.08);
     }
 
     body {
@@ -193,7 +193,7 @@
       gap: 8px;
       font-size: 0.88rem;
       font-weight: 700;
-      color: #1a1a2e;
+      color: #1a2e25;
     }
     .trust-item .trust-icon {
       width: 28px;
@@ -252,7 +252,7 @@
     }
     .tool-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(26,108,246,0.12);
+      box-shadow: 0 8px 32px rgba(26,107,60,0.12);
     }
     .tool-icon { font-size: 2rem; margin-bottom: 10px; }
     .tool-card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
@@ -346,8 +346,8 @@
 
     .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #00c9a7; margin-bottom: 16px; }
-    .result-main { font-size: 48px; font-weight: 800; color: #00c9a7; margin-bottom: 4px; line-height: 1.1; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #f59e0b; margin-bottom: 16px; }
+    .result-main { font-size: 48px; font-weight: 800; color: #f59e0b; margin-bottom: 4px; line-height: 1.1; }
     .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
@@ -421,46 +421,46 @@
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-    <div class="section-title"><i data-lucide="calculator" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#00c9a7"></i>Choose a Calculator</div>
+    <div class="section-title"><i data-lucide="calculator" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#f59e0b"></i>Choose a Calculator</div>
     <div class="tool-grid">
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#00c9a7"></i></div>
+        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#f59e0b"></i></div>
         <h2>Mortgage Payment Calculator</h2>
         <p>Find out exactly what your monthly mortgage payment will be — including principal, interest, and a full amortization breakdown.</p>
         <a class="btn-primary" href="mortgage-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="credit-card" style="width:32px;height:32px;color:#00c9a7"></i></div>
+        <div class="tool-icon"><i data-lucide="credit-card" style="width:32px;height:32px;color:#f59e0b"></i></div>
         <h2>Debt & Loan Payoff Calculator</h2>
         <p>See how long it will take to pay off your debt and how much interest you'll save with extra payments. Works for credit card debt, car loans, and personal loans.</p>
         <a class="btn-primary" href="loan-payoff-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="piggy-bank" style="width:32px;height:32px;color:#00c9a7"></i></div>
+        <div class="tool-icon"><i data-lucide="piggy-bank" style="width:32px;height:32px;color:#f59e0b"></i></div>
         <h2>Savings Goal Calculator</h2>
         <p>How much do you need to save each month to reach your goal? Enter your target and timeline to find out instantly.</p>
         <a class="btn-primary" href="savings-goal-calculator.html">Calculate Now →</a>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="briefcase" style="width:32px;height:32px;color:#00c9a7"></i></div>
+        <div class="tool-icon"><i data-lucide="briefcase" style="width:32px;height:32px;color:#f59e0b"></i></div>
         <h2>Freelancer Rate Calculator</h2>
         <p>Calculate the hourly rate you need to charge to hit your income goal — accounting for taxes, expenses, and unpaid time.</p>
         <button class="btn-primary" onclick="showCalc('freelance')">Calculate Now →</button>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="trending-up" style="width:32px;height:32px;color:#00c9a7"></i></div>
+        <div class="tool-icon"><i data-lucide="trending-up" style="width:32px;height:32px;color:#f59e0b"></i></div>
         <h2>Compound Interest Calculator</h2>
         <p>Watch your money grow. See exactly how compound interest builds wealth over time with any starting amount and rate.</p>
         <button class="btn-primary" onclick="showCalc('compound')">Calculate Now →</button>
       </div>
 
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="receipt" style="width:32px;height:32px;color:#00c9a7"></i></div>
+        <div class="tool-icon"><i data-lucide="receipt" style="width:32px;height:32px;color:#f59e0b"></i></div>
         <h2>Tax Withholding Estimator</h2>
         <p>Estimate how much federal income tax will be withheld from your paycheck so there are no surprises at tax time.</p>
         <button class="btn-primary" onclick="showCalc('tax')">Calculate Now →</button>
@@ -469,11 +469,11 @@
     </div>
 
     <!-- State Mortgage Calculators Section -->
-    <div class="section-title"><i data-lucide="map" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#00c9a7"></i>State Mortgage Calculators</div>
+    <div class="section-title"><i data-lucide="map" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;color:#f59e0b"></i>State Mortgage Calculators</div>
     <p style="color:var(--muted);font-size:0.92rem;margin-bottom:16px;margin-top:-10px;">Bankrate and NerdWallet use national averages. We built state-specific calculators pre-loaded with local property tax rates, real first-time buyer programs, and current mortgage rates for the most active housing markets.</p>
     <div class="tool-grid">
       <div class="tool-card">
-        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#00c9a7"></i></div>
+        <div class="tool-icon"><i data-lucide="home" style="width:32px;height:32px;color:#f59e0b"></i></div>
         <h2>Texas Mortgage Calculator</h2>
         <p>Pre-loaded with TX property tax rate (1.74%), average home price $310K, and My First Texas Home + MCC programs.</p>
         <a class="btn-primary" href="mortgage-calculator-texas.html">Calculate for Texas →</a>
@@ -512,7 +512,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="home" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Mortgage Payment Calculator</h2>
+      <h2><i data-lucide="home" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Mortgage Payment Calculator</h2>
       <p class="subtitle">Calculate your estimated monthly mortgage payment in seconds.</p>
       <div class="form-group">
         <label>Home Price ($)</label>
@@ -566,7 +566,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="credit-card" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Loan Payoff Calculator</h2>
+      <h2><i data-lucide="credit-card" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Loan Payoff Calculator</h2>
       <p class="subtitle">Find out how long it takes to pay off your loan and total interest paid.</p>
       <div class="form-group">
         <label>Loan Balance ($)</label>
@@ -605,7 +605,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="piggy-bank" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Savings Goal Calculator</h2>
+      <h2><i data-lucide="piggy-bank" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Savings Goal Calculator</h2>
       <p class="subtitle">How much do you need to save each month to reach your goal?</p>
       <div class="form-group">
         <label>Savings Goal ($)</label>
@@ -648,7 +648,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="briefcase" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Freelancer Hourly Rate Calculator</h2>
+      <h2><i data-lucide="briefcase" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Freelancer Hourly Rate Calculator</h2>
       <p class="subtitle">Find the minimum hourly rate you need to charge to hit your income goals.</p>
       <div class="form-group">
         <label>Desired Annual Income ($)</label>
@@ -697,7 +697,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Compound Interest Calculator</h2>
+      <h2><i data-lucide="trending-up" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Compound Interest Calculator</h2>
       <p class="subtitle">See how your money grows with compound interest over time.</p>
       <div class="form-group">
         <label>Starting Amount ($)</label>
@@ -750,7 +750,7 @@
   <div class="container" style="padding-top:32px">
     <button class="back-btn" onclick="showHome()">← Back to all calculators</button>
     <div class="calc-panel">
-      <h2><i data-lucide="receipt" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Tax Withholding Estimator</h2>
+      <h2><i data-lucide="receipt" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Tax Withholding Estimator</h2>
       <p class="subtitle">Estimate your federal income tax withholding per paycheck.</p>
       <div class="form-group">
         <label>Annual Gross Salary ($)</label>
@@ -798,30 +798,30 @@
   <div style="max-width:800px;margin:0 auto;">
 
     <!-- About FreeMoneyIQ -->
-    <h2 style="font-size:1.5rem;font-weight:800;color:#1a1a2e;margin-bottom:16px;">About FreeMoneyIQ</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#1a2e25;margin-bottom:16px;">About FreeMoneyIQ</h2>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">FreeMoneyIQ was built for the millions of Americans who make important financial decisions every year — buying a home, paying off a loan, saving for a goal — without access to a financial advisor and with no time to decipher complicated spreadsheets. Personal finance math isn't hard in concept, but it's full of hidden variables: compound interest, amortization curves, self-employment taxes, withholding adjustments. These are things most people only encounter when the stakes are high, and a wrong number can cost thousands of dollars or years of extra payments.</p>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">Every calculator on this site is designed around a simple principle: give you the one number you actually need, right now, with no sign-up required. You shouldn't have to create an account to find out what your monthly mortgage payment will be, or how much you need to save each month to hit a goal. The math is free. The answer is yours. We just make the calculation fast and accurate.</p>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:32px;font-size:0.97rem;">Our user base spans first-time homebuyers trying to figure out how much house they can actually afford, freelancers calculating whether their quoted rate covers their real costs, employees checking if their W-4 withholding is on track, and everyday savers modeling whether a high-yield savings account will get them to their goal faster. What they share is the same need: a reliable number, quickly, without ads pretending to be advice or paywalled results. That's what FreeMoneyIQ delivers.</p>
 
     <!-- How the Calculators Work -->
-    <h2 style="font-size:1.5rem;font-weight:800;color:#1a1a2e;margin-bottom:16px;">How These Calculators Work</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#1a2e25;margin-bottom:16px;">How These Calculators Work</h2>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">All six calculators on FreeMoneyIQ run entirely in your browser using standard financial formulas — no data is ever sent to a server, and your numbers stay completely private. The <strong>Mortgage Calculator</strong> uses the standard amortization formula to convert loan amount, interest rate, and term into a fixed monthly payment, then breaks out principal, interest, and property tax. The <strong>Loan Payoff Calculator</strong> simulates month-by-month amortization to find your exact payoff date and models how extra payments accelerate that timeline. The <strong>Savings Goal Calculator</strong> solves the future-value equation in reverse: given a target, a timeline, and an interest rate, it calculates the required monthly contribution accounting for interest already accumulating on your current balance.</p>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">The <strong>Freelancer Rate Calculator</strong> builds up your required hourly rate from first principles — starting with your income goal, adding taxes and business expenses, and dividing by realistic billable hours. This bottom-up approach avoids the most common freelancing mistake: anchoring a rate to equivalent salary without accounting for the full self-employment cost burden. The <strong>Compound Interest Calculator</strong> applies the standard compound growth formula with configurable compounding frequency and monthly contributions, giving you a year-by-year growth table so you can see exactly when the compounding curve steepens. The <strong>Tax Withholding Estimator</strong> applies the 2026 IRS tax brackets and standard deductions to estimate your annual federal liability, then compares it against your actual withholding to show whether you'll owe or receive a refund.</p>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:32px;font-size:0.97rem;">All calculators are updated for current 2026 rates, brackets, and benchmarks. Results are estimates — they provide an accurate baseline for planning purposes, but your final numbers may vary based on factors specific to your situation (PMI, state taxes, additional deductions, and so on). For major financial decisions, we always recommend using these results as a starting point and following up with a licensed professional. The calculators give you the literacy to have that conversation productively.</p>
 
     <!-- Why Personal Finance Math Is Confusing -->
-    <h2 style="font-size:1.5rem;font-weight:800;color:#1a1a2e;margin-bottom:16px;">Why Personal Finance Math Trips People Up</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#1a2e25;margin-bottom:16px;">Why Personal Finance Math Trips People Up</h2>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">The financial industry profits from complexity. Mortgage lenders don't advertise the total interest cost of a 30-year loan — they lead with the monthly payment, which looks manageable until you realize you'll pay nearly as much in interest as you borrowed. Credit card issuers promote minimum payments without showing how long it takes to pay off a $5,000 balance at 22% APR when you pay the minimum each month (hint: it's over 15 years, and you'll pay $5,000+ in interest alone). This information asymmetry is a feature, not a bug — borrowers who understand amortization shop harder, compare more lenders, and pay less in total.</p>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">Compound interest is the clearest example. It's simple in concept — interest earns interest — but its long-run effects are genuinely non-intuitive. Most people underestimate how much their savings will grow if they start early, and overestimate how much extra time can compensate for starting late. An investor who puts $300/month into a 7% annual-return index fund from age 25 to 35 (just 10 years of contributions) and then stops will end up with more money at 65 than someone who starts at 35 and contributes every month until 65. That's 30 years of contributions versus 10 — and the early starter still wins. Seeing that calculation with real numbers changes behavior.</p>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:32px;font-size:0.97rem;">Tax withholding is another area where simple tools pay outsized dividends. Millions of Americans either over-withhold (effectively giving the IRS an interest-free loan) or under-withhold (getting hit with a surprise April bill that can trigger penalties). A W-4 update takes five minutes, but most workers don't know when they need one — a new job, a pay raise, a freelance side income, or a major life event like marriage or a new dependent can all shift your liability significantly. This estimator helps you see that gap before it becomes a problem.</p>
 
     <!-- Data Table 1: Calculator Quick Reference -->
-    <h2 style="font-size:1.5rem;font-weight:800;color:#1a1a2e;margin-bottom:16px;">Calculator Quick Reference</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#1a2e25;margin-bottom:16px;">Calculator Quick Reference</h2>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">Not sure which calculator to use? Here's a quick guide to what each tool does and the one number it gives you.</p>
     <div style="overflow-x:auto;margin:0 0 32px;">
       <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
         <thead>
-          <tr style="background:#1a6cf6;color:white;">
+          <tr style="background:#1a6b3c;color:white;">
             <th style="text-align:left;padding:11px 14px;font-weight:700;">Calculator</th>
             <th style="text-align:left;padding:11px 14px;font-weight:700;">Best For</th>
             <th style="text-align:left;padding:11px 14px;font-weight:700;">Key Output</th>
@@ -870,12 +870,12 @@
     </div>
 
     <!-- Data Table 2: 2026 Financial Benchmarks -->
-    <h2 style="font-size:1.5rem;font-weight:800;color:#1a1a2e;margin-bottom:16px;">2026 Key Financial Benchmarks</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#1a2e25;margin-bottom:16px;">2026 Key Financial Benchmarks</h2>
     <p style="color:#6b7280;line-height:1.8;margin-bottom:16px;font-size:0.97rem;">Reference numbers that help put your calculator results in context — updated for 2026.</p>
     <div style="overflow-x:auto;margin:0 0 32px;">
       <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
         <thead>
-          <tr style="background:#1a6cf6;color:white;">
+          <tr style="background:#1a6b3c;color:white;">
             <th style="text-align:left;padding:11px 14px;font-weight:700;">Benchmark</th>
             <th style="text-align:left;padding:11px 14px;font-weight:700;">2026 Figure</th>
             <th style="text-align:left;padding:11px 14px;font-weight:700;">Why It Matters</th>
@@ -936,45 +936,45 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
     <!-- FAQ Section -->
-    <h2 style="font-size:1.5rem;font-weight:800;color:#1a1a2e;margin-bottom:20px;">Frequently Asked Questions</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;color:#1a2e25;margin-bottom:20px;">Frequently Asked Questions</h2>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:12px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">Are these calculators free to use?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">Are these calculators free to use?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">Yes — completely free, no account required, and no limit on how many calculations you run. Every tool on FreeMoneyIQ runs in your browser. You can use any calculator as many times as you like, adjust inputs, compare scenarios, and share results without ever creating an account or handing over your email address.</p>
     </div>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:12px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">How accurate are the calculator results?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">How accurate are the calculator results?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">The calculations use standard financial formulas and are accurate for their stated inputs. The mortgage calculator uses the standard amortization formula used by every lender. The tax estimator applies the current IRS bracket tables. That said, real-world results can differ: mortgages may include PMI, HOA fees, or flood insurance; tax liability can shift based on deductions, credits, and state taxes not modeled here. Use these as a solid starting estimate, then verify with your lender or tax professional before finalizing any major decision.</p>
     </div>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:12px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">Is my financial data private?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">Is my financial data private?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">Completely. All calculations run entirely in your browser — the numbers you enter never leave your device and are never sent to any server. We don't store, log, or share your calculator inputs. You can verify this by checking your browser's network tab: no data requests are made when you click Calculate. This is by design; your financial information is private and should stay that way.</p>
     </div>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:12px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">What is the 50/30/20 budgeting rule?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">What is the 50/30/20 budgeting rule?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">The 50/30/20 rule is a simple budgeting framework: allocate 50% of your after-tax income to needs (rent, groceries, utilities, insurance, minimum debt payments), 30% to wants (dining out, entertainment, subscriptions, travel), and 20% to savings and extra debt payments. On a $5,000/month take-home, that means $1,000/month moving toward financial goals. It's not a perfect fit for every income level or cost-of-living zone, but it gives a useful benchmark — and most people who run the numbers for the first time find their actual spending ratios reveal something surprising.</p>
     </div>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:12px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">What is a good credit score for a mortgage?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">What is a good credit score for a mortgage?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">To qualify for a conventional loan at the best available rates, you generally want a FICO score of 740 or higher. Scores in the 700–739 range are still competitive and typically qualify for favorable rates. FHA loans are accessible at scores as low as 580 (with 3.5% down), though rates will be higher. According to FICO data, the difference between a 639 and a 760+ score can mean a 0.5–1.5% higher interest rate — on a $350,000 mortgage, that adds up to $35,000–$80,000 in extra interest over 30 years. Improving your credit score before applying for a mortgage is often the highest-ROI financial move available.</p>
     </div>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:12px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">How much should I have in an emergency fund?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">How much should I have in an emergency fund?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">The standard recommendation is 3–6 months of essential living expenses — your rent or mortgage, utilities, food, insurance, and minimum debt payments. If your monthly essentials total $3,500, your target range is $10,500 to $21,000. Single-income households or those in variable-income work (freelancers, commission-based earners) should target the higher end. Keep your emergency fund in a high-yield savings account (HYSA) earning 4–5% APY rather than a traditional checking or savings account paying near zero. Use our Savings Goal Calculator to find exactly how long it takes to build your emergency fund at any monthly savings rate.</p>
     </div>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:12px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">What is a debt-to-income ratio and why does it matter?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">What is a debt-to-income ratio and why does it matter?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">Your debt-to-income (DTI) ratio is the percentage of your gross monthly income that goes toward all monthly debt payments, including the new mortgage or loan you're applying for. Most mortgage lenders want to see a front-end DTI (housing costs only) below 28% and a back-end DTI (all debts combined) below 43%. On a $7,000/month gross income, that means total monthly debt payments shouldn't exceed $3,010 to qualify. A lower DTI not only improves your approval odds but often qualifies you for better interest rates, because it signals lower default risk to lenders.</p>
     </div>
 
     <div style="border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:32px;background:#fff;">
-      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a1a2e;">Should I pay off debt or invest first?</h3>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#1a2e25;">Should I pay off debt or invest first?</h3>
       <p style="font-size:0.9rem;color:#6b7280;line-height:1.6;margin:0;">The general rule: prioritize eliminating debt with interest rates above 7–8% APR before investing, because paying off that debt is a guaranteed return matching your interest rate — something no investment can promise without risk. Below that threshold, investing in a diversified index fund has historically outperformed early payoff over long time horizons. One exception has no debate: always capture your full 401(k) employer match before paying down debt. That match is an immediate 50–100% guaranteed return — the single best financial move available to most employees. Once the match is secured, allocate extra cash toward your highest-rate balances first (the debt avalanche method) to minimize total interest paid.</p>
     </div>
 
@@ -1080,7 +1080,7 @@
     document.getElementById('m-totalint').textContent = fmt(totalInt);
     document.getElementById('mortgage-result').classList.add('show');
     const mCtx=document.getElementById('idx-mortgage-chart').getContext('2d');
-    const mD={labels:['P&I','Property Tax'],datasets:[{data:[Math.round(pi),Math.round(taxMo)],backgroundColor:['#1a6cf6','#F59E0B'],borderWidth:0}]};
+    const mD={labels:['P&I','Property Tax'],datasets:[{data:[Math.round(pi),Math.round(taxMo)],backgroundColor:['#1a6b3c','#F59E0B'],borderWidth:0}]};
     if(idxMortgageChart){idxMortgageChart.data=mD;idxMortgageChart.update();}
     else{idxMortgageChart=new Chart(mCtx,{type:'doughnut',data:mD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -1107,7 +1107,7 @@
     document.getElementById('l-pct').textContent = ((totalInterest/origBalance)*100).toFixed(1)+'%';
     document.getElementById('loan-result').classList.add('show');
     const lCtx=document.getElementById('idx-loan-chart').getContext('2d');
-    const lD={labels:['Principal','Interest Paid'],datasets:[{data:[Math.round(origBalance),Math.round(totalInterest)],backgroundColor:['#1a6cf6','#EF4444'],borderWidth:0}]};
+    const lD={labels:['Principal','Interest Paid'],datasets:[{data:[Math.round(origBalance),Math.round(totalInterest)],backgroundColor:['#1a6b3c','#EF4444'],borderWidth:0}]};
     if(idxLoanChart){idxLoanChart.data=lD;idxLoanChart.update();}
     else{idxLoanChart=new Chart(lCtx,{type:'doughnut',data:lD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -1135,7 +1135,7 @@
     document.getElementById('s-date').textContent = targetDate.toLocaleDateString('en-US',{month:'short',year:'numeric'});
     document.getElementById('savings-result').classList.add('show');
     const sCtx=document.getElementById('idx-savings-chart').getContext('2d');
-    const sD={labels:['Current Savings','Contributions','Interest'],datasets:[{data:[Math.round(current),Math.round(monthly*months),Math.round(Math.max(0,interestEarned))],backgroundColor:['#1a6cf6','#10B981','#F59E0B'],borderWidth:0}]};
+    const sD={labels:['Current Savings','Contributions','Interest'],datasets:[{data:[Math.round(current),Math.round(monthly*months),Math.round(Math.max(0,interestEarned))],backgroundColor:['#1a6b3c','#10B981','#F59E0B'],borderWidth:0}]};
     if(idxSavingsChart){idxSavingsChart.data=sD;idxSavingsChart.update();}
     else{idxSavingsChart=new Chart(sCtx,{type:'doughnut',data:sD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -1158,7 +1158,7 @@
     document.getElementById('f-daily').textContent = fmt2(hourlyRate * 8);
     document.getElementById('freelance-result').classList.add('show');
     const fCtx=document.getElementById('idx-freelance-chart').getContext('2d');
-    const fD={labels:['Desired Income','Expenses','Tax'],datasets:[{data:[Math.round(income),Math.round(expenses),Math.round(taxAmount)],backgroundColor:['#1a6cf6','#10B981','#EF4444'],borderWidth:0}]};
+    const fD={labels:['Desired Income','Expenses','Tax'],datasets:[{data:[Math.round(income),Math.round(expenses),Math.round(taxAmount)],backgroundColor:['#1a6b3c','#10B981','#EF4444'],borderWidth:0}]};
     if(idxFreelanceChart){idxFreelanceChart.data=fD;idxFreelanceChart.update();}
     else{idxFreelanceChart=new Chart(fCtx,{type:'doughnut',data:fD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }
@@ -1186,7 +1186,7 @@
     document.getElementById('ci-roi').textContent = roi + '%';
     document.getElementById('compound-result').classList.add('show');
     const cCtx=document.getElementById('idx-compound-chart').getContext('2d');
-    const cD={labels:['Principal','Interest Earned'],datasets:[{data:[Math.round(contributed),Math.round(Math.max(0,earned))],backgroundColor:['#1a6cf6','#10B981'],borderWidth:0}]};
+    const cD={labels:['Principal','Interest Earned'],datasets:[{data:[Math.round(contributed),Math.round(Math.max(0,earned))],backgroundColor:['#1a6b3c','#10B981'],borderWidth:0}]};
     if(idxCompoundChart){idxCompoundChart.data=cD;idxCompoundChart.update();}
     else{idxCompoundChart=new Chart(cCtx,{type:'doughnut',data:cD,options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});}
   }

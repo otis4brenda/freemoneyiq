@@ -93,9 +93,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --primary: #1a6cf6; --primary-dark: #1452c8; --accent: #00c9a7;
-      --bg: #f4f7fb; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
-      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,108,246,0.08);
+      --primary: #1a6b3c; --primary-dark: #0d4a28; --accent: #f59e0b;
+      --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280;
+      --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,107,60,0.08);
     }
     body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
     nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
@@ -104,7 +104,7 @@
     .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
     .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-    .hero { background: linear-gradient(135deg, #1a6cf6 0%, #00c9a7 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+    .hero { background: linear-gradient(135deg, #1a6b3c 0%, #f59e0b 100%); color: white; text-align: center; padding: 48px 24px 40px; }
     .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
     .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -122,8 +122,8 @@
     .calc-btn:hover { background: var(--primary-dark); }
     .result-box { display: none; margin-top: 24px; }
     .result-box.show { display: block; }
-    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #00c9a7; margin-bottom: 16px; }
-    .result-main { font-size: 52px; font-weight: 800; color: #00c9a7; margin-bottom: 4px; line-height: 1.1; }
+    .result-card { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; padding: 24px; border-top: 4px solid #f59e0b; margin-bottom: 16px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #f59e0b; margin-bottom: 4px; line-height: 1.1; }
     .result-label { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: #f8fafc; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
@@ -219,7 +219,7 @@
 <div class="container">
 
   <div class="calc-panel">
-    <h2><i data-lucide="briefcase" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#00c9a7"></i>Freelancer Rate Calculator</h2>
+    <h2><i data-lucide="briefcase" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;color:#f59e0b"></i>Freelancer Rate Calculator</h2>
     <p class="subtitle">Enter your income goal and work details to find your minimum hourly rate. · Updated October 2026</p>
     <div class="form-row">
       <div class="form-group">
@@ -266,7 +266,7 @@
 </div>
 
 <div class="content-section">
-  <p class="quick-answer" style="background:#f0f7ff; border-left:4px solid #1a6cf6; padding:12px 16px; border-radius:6px; font-size:0.95rem; margin-bottom:20px;"><strong>Most full-time freelancers in the U.S. charge between $75 and $150 per hour in 2026</strong>, with the median across 21 professions sitting at $105/hr according to WhatShouldICharge's 2026 analysis of BLS wage data. To find your floor, take your target net income, add 30% for self-employment taxes plus benefits and business overhead, then divide by your realistic 900–1,200 billable hours per year — not the 2,080 hours a salaried employee works.</p></p></p></p>
+  <p class="quick-answer" style="background:#f0f7ff; border-left:4px solid #1a6b3c; padding:12px 16px; border-radius:6px; font-size:0.95rem; margin-bottom:20px;"><strong>Most full-time freelancers in the U.S. charge between $75 and $150 per hour in 2026</strong>, with the median across 21 professions sitting at $105/hr according to WhatShouldICharge's 2026 analysis of BLS wage data. To find your floor, take your target net income, add 30% for self-employment taxes plus benefits and business overhead, then divide by your realistic 900–1,200 billable hours per year — not the 2,080 hours a salaried employee works.</p></p></p></p>
   <h2>Why Most Freelancers Undercharge</h2>
   <p>The most common mistake freelancers make in 2026 is anchoring their rate to equivalent salaried pay. A $75,000/year salary works out to about $36/hr — but charging that as a freelancer leaves you significantly underpaid. That salary includes employer payroll taxes, subsidized health insurance, paid time off, and zero business overhead on your end. Strip those away and the real cost to an employer for that same labor runs closer to $108,000/year — meaning a true break-even freelance rate starts around $52/hr before your personal income target is even factored in.</p>
   <p>The 2026 freelance market has added a compounding challenge: AI tools have raised client expectations around speed and output, but your fixed costs haven't moved. Self-employment tax (15.3%), marketplace platform fees (most platforms take 10–20% off the top), and health insurance averaging $450–$700/month on 2026 ACA marketplace plans are non-negotiable expenses regardless of how efficient you become. Factor these in before quoting any project.</p>
@@ -301,7 +301,7 @@
   <p>Use these ranges as a sanity check against your calculated rate. Data sourced from ZipRecruiter, Upwork Talent Report, and Toptal Rate Index (2026).</p>
   <div style="overflow-x:auto;margin-top:16px;">
     <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
-      <thead><tr style="background:#1a6cf6;color:white;">
+      <thead><tr style="background:#1a6b3c;color:white;">
         <th style="padding:10px 12px;text-align:left;">Industry / Specialty</th>
         <th style="padding:10px 12px;text-align:center;">Entry Level</th>
         <th style="padding:10px 12px;text-align:center;">Mid-Career</th>
@@ -328,7 +328,7 @@
   <p>Assumes 28% effective tax rate, $5,000/year in business expenses, and 1,200 billable hours/year (25 hrs/week × 48 weeks).</p>
   <div style="overflow-x:auto;margin-top:16px;">
     <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
-      <thead><tr style="background:#00c9a7;color:white;">
+      <thead><tr style="background:#f59e0b;color:white;">
         <th style="padding:10px 12px;text-align:left;">Target Take-Home Income</th>
         <th style="padding:10px 12px;text-align:center;">Gross Revenue Needed</th>
         <th style="padding:10px 12px;text-align:center;">Min. Hourly Rate</th>
@@ -351,7 +351,7 @@
   <p>Self-employed freelancers face a layered tax structure. Here's what you owe and when:</p>
   <div style="overflow-x:auto;margin-top:16px;">
     <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
-      <thead><tr style="background:#1a6cf6;color:white;">
+      <thead><tr style="background:#1a6b3c;color:white;">
         <th style="padding:10px 12px;text-align:left;">Tax Type</th>
         <th style="padding:10px 12px;text-align:center;">Rate</th>
         <th style="padding:10px 12px;text-align:center;">Income Cap</th>
@@ -371,7 +371,7 @@
   <p>Your billable hours are the single biggest lever in your rate calculation. Here's how different work patterns compare:</p>
   <div style="overflow-x:auto;margin-top:16px;">
     <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
-      <thead><tr style="background:#00c9a7;color:white;">
+      <thead><tr style="background:#f59e0b;color:white;">
         <th style="padding:10px 12px;text-align:left;">Work Style</th>
         <th style="padding:10px 12px;text-align:center;">Hrs Billed/Week</th>
         <th style="padding:10px 12px;text-align:center;">Weeks/Year</th>
@@ -433,11 +433,11 @@
 <div class="related-calcs">
   <h2>Other Free Calculators</h2>
   <div class="related-grid">
-    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Mortgage Calculator</div></a>
-    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Loan Payoff Calculator</div></a>
-    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon"><i data-lucide="piggy-bank" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Savings Goal Calculator</div></a>
-    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon"><i data-lucide="trending-up" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Compound Interest Calculator</div></a>
-    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#00c9a7"></i></div><div class="name">Tax Withholding Calculator</div></a>
+    <a href="/mortgage-calculator.html" class="related-card"><div class="icon"><i data-lucide="home" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Mortgage Calculator</div></a>
+    <a href="/loan-payoff-calculator.html" class="related-card"><div class="icon"><i data-lucide="credit-card" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Loan Payoff Calculator</div></a>
+    <a href="/savings-goal-calculator.html" class="related-card"><div class="icon"><i data-lucide="piggy-bank" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Savings Goal Calculator</div></a>
+    <a href="/compound-interest-calculator.html" class="related-card"><div class="icon"><i data-lucide="trending-up" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Compound Interest Calculator</div></a>
+    <a href="/tax-withholding-calculator.html" class="related-card"><div class="icon"><i data-lucide="receipt" style="width:24px;height:24px;color:#f59e0b"></i></div><div class="name">Tax Withholding Calculator</div></a>
   </div>
 </div>
 
@@ -447,8 +447,8 @@
   <h2 style="font-size:1.05rem;font-weight:700;margin:0 0 12px;">🔬 Methodology</h2>
   <p style="font-size:0.9rem;color:#374151;line-height:1.7;margin:0 0 10px;">The freelancer rate formula used in this calculator is derived from IRS-defined self-employment obligations and standard freelancer cost structures:</p>
   <ul style="font-size:0.9rem;color:#374151;line-height:1.9;margin:0 0 10px;padding-left:20px;">
-    <li><strong>Self-employment (SE) tax:</strong> 15.3% on net earnings up to the 2026 Social Security wage base ($184,500), per <a href="https://www.irs.gov/forms-pubs/about-schedule-se-form-1040" style="color:#1a6cf6;">IRS Schedule SE</a>. An additional 0.9% Medicare surtax applies above $200,000.</li>
-    <li><strong>Business expenses:</strong> User-entered or defaults from <a href="https://www.irs.gov/publications/p334" style="color:#1a6cf6;">IRS Publication 334</a> typical small-business expense benchmarks.</li>
+    <li><strong>Self-employment (SE) tax:</strong> 15.3% on net earnings up to the 2026 Social Security wage base ($184,500), per <a href="https://www.irs.gov/forms-pubs/about-schedule-se-form-1040" style="color:#1a6b3c;">IRS Schedule SE</a>. An additional 0.9% Medicare surtax applies above $200,000.</li>
+    <li><strong>Business expenses:</strong> User-entered or defaults from <a href="https://www.irs.gov/publications/p334" style="color:#1a6b3c;">IRS Publication 334</a> typical small-business expense benchmarks.</li>
     <li><strong>Billable hours model:</strong> Based on a standard 50-week work year with 60% billable utilization (industry benchmark per Upwork Talent Report 2026 and Toptal Rate Index 2026), yielding ~1,000–1,200 billable hours/year for full-time freelancers.</li>
     <li><strong>Rate market benchmarks:</strong> Cross-referenced against ZipRecruiter 2026 Freelance Rate Report (national average: $47.71/hr) and Upwork 2026 skill category data.</li>
   </ul>
@@ -470,7 +470,7 @@
 
 <!-- E-E-A-T Attribution -->
 <div style="background:#f0f7ff;border-top:1px solid #e5e7eb;padding:20px 24px;text-align:center;font-size:0.83rem;color:#6b7280;">
-  <p>Written by the <strong><a href="/about.html" style="color:#1a6cf6;text-decoration:none;">FreeMoneyIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
+  <p>Written by the <strong><a href="/about.html" style="color:#1a6b3c;text-decoration:none;">FreeMoneyIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
   <p style="margin-top:6px;max-width:700px;margin-left:auto;margin-right:auto;">Freelancer rate methodology accounts for self-employment tax (15.3%, IRS Schedule SE), business expenses, and billable hour models per IRS Publication 334.</p>
 </div>
 
@@ -507,12 +507,12 @@
     const ctx = document.getElementById('freelance-chart').getContext('2d');
     const chartData = {
       labels: ['Base Costs (Income + Expenses)', 'Tax Buffer', 'Revenue Margin'],
-      datasets: [{ data: [Math.round(income + expenses), Math.round(taxAmount), Math.round(Math.max(0, revenueNeeded - income - expenses - taxAmount))], backgroundColor: ['#1a6cf6', '#EF4444', '#10B981'], borderWidth: 0 }]
+      datasets: [{ data: [Math.round(income + expenses), Math.round(taxAmount), Math.round(Math.max(0, revenueNeeded - income - expenses - taxAmount))], backgroundColor: ['#1a6b3c', '#EF4444', '#10B981'], borderWidth: 0 }]
     };
     // Simplify: show income vs expenses vs tax
     const chartData2 = {
       labels: ['Desired Income', 'Business Expenses', 'Tax Buffer'],
-      datasets: [{ data: [Math.round(income), Math.round(expenses), Math.round(taxAmount)], backgroundColor: ['#1a6cf6', '#10B981', '#EF4444'], borderWidth: 0 }]
+      datasets: [{ data: [Math.round(income), Math.round(expenses), Math.round(taxAmount)], backgroundColor: ['#1a6b3c', '#10B981', '#EF4444'], borderWidth: 0 }]
     };
     if (freelanceChart) { freelanceChart.data = chartData2; freelanceChart.update(); }
     else {
@@ -534,7 +534,7 @@
 </script>
 
 <div class="embed-attribution" style="display:none;text-align:center;padding:8px;font-size:12px;color:#666;border-top:1px solid #e5e7eb;">
-  Free calculator by <a href="https://freemoneyiq.com/freelancer-rate-calculator.html" style="color:#1a6cf6;">FreeMoneyIQ</a> — no login required
+  Free calculator by <a href="https://freemoneyiq.com/freelancer-rate-calculator.html" style="color:#1a6b3c;">FreeMoneyIQ</a> — no login required
 </div>
 
 <!-- Embed Snippet:
