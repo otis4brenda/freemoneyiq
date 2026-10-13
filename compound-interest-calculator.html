@@ -112,12 +112,6 @@
       --border: #e5e7eb; --radius: 12px; --shadow: 0 2px 16px rgba(26,107,60,0.08);
     }
     body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
-    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-    .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary); }
     .hero { background: linear-gradient(135deg, #1a6b3c 0%, #f59e0b 100%); color: white; text-align: center; padding: 48px 24px 40px; }
     .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
     .hero p { font-size: 1rem; opacity: 0.9; max-width: 540px; margin: 0 auto; }
@@ -170,7 +164,24 @@
     footer { background: var(--text); color: #9ca3af; text-align: center; padding: 32px 24px; font-size: 0.85rem; margin-top: 48px; }
     footer a { color: #9ca3af; text-decoration: none; }
     footer a:hover { color: white; }
-    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } }
+      nav {
+      background: var(--primary);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 24px 4px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; } .nav-logo img { display:block; height:48px; width:auto; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: nowrap; overflow-x: auto; margin-top: 3px; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; } .nav-links::-webkit-scrollbar { display: none; } .nav-links a { white-space: nowrap; flex-shrink: 0; }
+    .nav-links a { text-decoration: none; color: rgba(255,255,255,0.75); font-size: 0.8rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
   </style>
   <!-- Chart.js & Lucide Icons -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -217,15 +228,15 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="/">Free<span>MoneyIQ</span></a>
+  <a class="nav-logo" href="/"><img src="/images/logo.png" alt="FreeMoneyIQ" style="height:48px;width:auto;display:block;"></a>
   <div class="nav-links">
     <a href="/">Home</a>
     <a href="/mortgage-calculator.html">Mortgage</a>
-    <a href="/loan-payoff-calculator.html">Loan</a>
-    <a href="/savings-goal-calculator.html">Savings</a>
+    <a href="/loan-payoff-calculator.html">Loan Payoff</a>
+    <a href="/savings-goal-calculator.html">Savings Goal</a>
+    <a href="/compound-interest-calculator.html">Compound Interest</a>
+    <a href="/tax-withholding-calculator.html">Tax Withholding</a>
     <a href="/freelancer-rate-calculator.html">Freelance Rate</a>
-    <a href="/compound-interest-calculator.html" class="active">Compound</a>
-    <a href="/tax-withholding-calculator.html">Tax</a>
     <a href="/about.html">About</a>
   </div>
 </nav>

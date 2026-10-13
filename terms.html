@@ -17,9 +17,6 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --primary: #1a6b3c; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #e5e7eb; }
     body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
-    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; }
-    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-    .nav-logo span { color: var(--accent); }
     .container { max-width: 700px; margin: 48px auto; padding: 0 24px; }
     h1 { font-size: 2rem; font-weight: 800; margin-bottom: 24px; }
     h2 { font-size: 1.1rem; font-weight: 700; margin: 28px 0 8px; color: var(--text); }
@@ -27,11 +24,40 @@
     ul { color: var(--muted); line-height: 1.7; margin-bottom: 12px; padding-left: 20px; }
     ul li { margin-bottom: 6px; }
     a { color: var(--primary); }
+      nav {
+      background: var(--primary);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 24px 4px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; } .nav-logo img { display:block; height:48px; width:auto; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: nowrap; overflow-x: auto; margin-top: 3px; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; } .nav-links::-webkit-scrollbar { display: none; } .nav-links a { white-space: nowrap; flex-shrink: 0; }
+    .nav-links a { text-decoration: none; color: rgba(255,255,255,0.75); font-size: 0.8rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav><a class="nav-logo" href="/">Free<span>MoneyIQ</span></a></nav>
+<nav>
+  <a class="nav-logo" href="/"><img src="/images/logo.png" alt="FreeMoneyIQ" style="height:48px;width:auto;display:block;"></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/mortgage-calculator.html">Mortgage</a>
+    <a href="/loan-payoff-calculator.html">Loan Payoff</a>
+    <a href="/savings-goal-calculator.html">Savings Goal</a>
+    <a href="/compound-interest-calculator.html">Compound Interest</a>
+    <a href="/tax-withholding-calculator.html">Tax Withholding</a>
+    <a href="/freelancer-rate-calculator.html">Freelance Rate</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
 <div class="container">
   <h1>Terms of Use</h1>
   <p><em>Last updated: May 2026</em></p>
