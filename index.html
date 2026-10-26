@@ -1190,14 +1190,14 @@
     const salary = +document.getElementById('t-salary').value;
     const status = document.getElementById('t-status').value;
     const freq   = +document.getElementById('t-freq').value;
-    // 2024 standard deductions
-    const stdDed = status === 'married' ? 29200 : status === 'hoh' ? 21900 : 14600;
+    // 2026 standard deductions
+    const stdDed = status === 'married' ? 30000 : status === 'hoh' ? 22500 : 15000;
     const taxable = Math.max(0, salary - stdDed);
-    // 2024 brackets (simplified)
+    // 2026 brackets
     let tax = 0;
     const brackets = status === 'married'
       ? [[23200,0.10],[94300,0.12],[201050,0.22],[383900,0.24],[487450,0.32],[731200,0.35],[Infinity,0.37]]
-      : [[11600,0.10],[47150,0.12],[100525,0.22],[191950,0.24],[243725,0.32],[609350,0.35],[Infinity,0.37]];
+      : [[11925,0.10],[48475,0.12],[103350,0.22],[197300,0.24],[250525,0.32],[626350,0.35],[Infinity,0.37]];
     let prev = 0;
     for (const [limit, bracketRate] of brackets) {
       if (taxable <= prev) break;
